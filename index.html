@@ -1,0 +1,3195 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN | Triển Lãm Nghệ Thuật Số & Lưu Trữ Đám Mây</title>
+  <meta name="description" content="Thư viện Hình ảnh AI – An Nhiên thuộc thương hiệu An Nhiên AI. Không gian triển lãm nghệ thuật số quốc tế, lưu trữ bền vững và trưng bày các tác phẩm chân dung, phong cảnh, hoa & thiên nhiên, tranh màu nước, thời trang, poster, phục chế ảnh và MV ca nhạc.">
+  <meta name="keywords" content="An Nhiên AI, Thư viện hình ảnh AI, Triển lãm nghệ thuật số, AI Art Gallery, Chân dung nghệ thuật AI, Phục chế ảnh cổ AI, Ảnh MV ca nhạc, Suno AI Music, Khóa học AI">
+  <meta name="author" content="An Nhiên AI">
+  <meta property="og:title" content="THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN | Phòng Triển Lãm Nghệ Thuật Số">
+  <meta property="og:description" content="Không gian lưu trữ, quản lý và trưng bày các tác phẩm nghệ thuật sáng tạo bằng trí tuệ nhân tạo thuộc thương hiệu An Nhiên AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Fonts: Cormorant Garamond (Museum Serif) & Plus Jakarta Sans (Clean Vietnamese UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            obsidian: {
+              950: '#07080B',
+              900: '#0C0E14',
+              800: '#131722',
+              700: '#1E2433',
+            },
+            champagne: {
+              300: '#F3E5AB',
+              400: '#E5C878',
+              500: '#D4AF37',
+              600: '#B59024',
+              700: '#8C6D18',
+            },
+            ivory: {
+              50: '#FCFBF8',
+              100: '#F6F3EC',
+              200: '#EAE3D5',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #07080B;
+      --bg-secondary: #0E1118;
+      --bg-card: #131722;
+      --text-primary: #F8F6F0;
+      --text-secondary: #A9B2C3;
+      --accent-gold: #D4AF37;
+      --accent-gold-soft: rgba(212, 175, 55, 0.16);
+      --border-subtle: rgba(212, 175, 55, 0.22);
+    }
+
+    html.light-museum {
+      --bg-primary: #FAF7F2;
+      --bg-secondary: #F1ECE1;
+      --bg-card: #FFFFFF;
+      --text-primary: #181613;
+      --text-secondary: #5C564B;
+      --accent-gold: #9A7420;
+      --accent-gold-soft: rgba(154, 116, 32, 0.12);
+      --border-subtle: rgba(154, 116, 32, 0.24);
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    .font-museum {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Ambient Museum Lighting */
+    .museum-spotlight {
+      background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, rgba(12, 14, 20, 0) 70%);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.4);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.75);
+    }
+
+    /* Artwork Card Exhibition Hover & Framing */
+    .art-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+    }
+    .art-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 45px -12px rgba(0, 0, 0, 0.65), 0 0 25px -5px rgba(212, 175, 55, 0.22);
+      border-color: var(--accent-gold);
+    }
+    .art-card .art-img {
+      transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+    }
+    .art-card:hover .art-img {
+      transform: scale(1.045);
+    }
+
+    /* Museum Mat Frame Mode */
+    .museum-mat-frame {
+      padding: 18px;
+      background: linear-gradient(145deg, #F9F6F0, #EAE3D2);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.28), 0 12px 30px rgba(0,0,0,0.45);
+      border: 3px solid #C8A24A;
+    }
+
+    /* Aspect Ratio Helpers */
+    .ratio-16-9 { aspect-ratio: 16 / 9; }
+    .ratio-9-16 { aspect-ratio: 9 / 16; }
+    .ratio-1-1  { aspect-ratio: 1 / 1; }
+    .ratio-3-4  { aspect-ratio: 3 / 4; }
+
+    /* Masonry Bento Grid */
+    .exhibition-masonry {
+      column-count: 1;
+      column-gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .exhibition-masonry { column-count: 2; }
+    }
+    @media (min-width: 1024px) {
+      .exhibition-masonry { column-count: 3; }
+    }
+    @media (min-width: 1400px) {
+      .exhibition-masonry { column-count: 4; }
+    }
+    .exhibition-masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Gold shimmer badge */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF3C4 0%, #D4AF37 50%, #AA8010 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html.light-museum .gold-gradient-text {
+      background: linear-gradient(135deg, #7A580B 0%, #B38728 50%, #5E4204 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #E5C878 0%, #D4AF37 55%, #B59024 100%);
+      color: #090A0F;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .gold-btn:hover {
+      filter: brightness(1.08);
+      box-shadow: 0 8px 25px -4px rgba(212, 175, 55, 0.55);
+      transform: translateY(-1px);
+    }
+
+    /* Lightbox Zoom Canvas Container */
+    .lightbox-stage {
+      touch-action: none;
+      user-select: none;
+    }
+  </style>
+
+  <!-- Dynamic SEO JSON-LD Schema -->
+  <script id="seo-json-ld" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ArtGallery",
+    "name": "THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN",
+    "alternateName": "An Nhiên AI Art Gallery",
+    "description": "Phòng triển lãm nghệ thuật số và kho lưu trữ tác phẩm trí tuệ nhân tạo thuộc thương hiệu An Nhiên AI.",
+    "brand": {
+      "@type": "Brand",
+      "name": "An Nhiên AI"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "An Nhiên AI"
+    }
+  }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-champagne-500 selection:text-obsidian-950">
+
+  <!-- TOP EXHIBITION ANNOUNCEMENT & CLOUD STATUS BAR -->
+  <div class="w-full border-b border-champagne-500/20 bg-obsidian-900/90 text-xs text-slate-300 px-4 py-2">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium tracking-wider uppercase text-champagne-400">AN NHIÊN AI • DIGITAL ART EXHIBITION</span>
+        <span class="hidden md:inline text-slate-400">| Không gian lưu trữ & trưng bày nghệ thuật số quốc tế</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <button id="btn-cloud-status-pill" onclick="openAdminModal('cloud')" class="flex items-center gap-1.5 hover:text-champagne-400 transition-colors" title="Cấu hình lưu trữ đám mây bền vững">
+          <svg class="w-3.5 h-3.5 text-champagne-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          <span id="cloud-status-text">Lưu trữ: IndexedDB Bền Vững + Cloud Sẵn Sàng</span>
+        </button>
+        <button id="btn-theme-toggle" onclick="toggleMuseumTheme()" class="flex items-center gap-1 px-2.5 py-0.5 rounded-full border border-champagne-500/30 hover:border-champagne-400 text-champagne-300 transition">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-label">Phòng Tối</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN STICKY NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-obsidian-950/85 border-b border-champagne-500/20 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Logo -->
+      <a href="#trang-chu" onclick="navigateSection('trang-chu')" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-champagne-400 via-champagne-500 to-champagne-700 p-[1.5px] shadow-lg shadow-champagne-500/20">
+          <div class="w-full h-full bg-obsidian-950 rounded-[10px] flex items-center justify-center">
+            <span class="font-museum text-2xl font-bold text-champagne-400 tracking-tighter">AN</span>
+          </div>
+        </div>
+        <div>
+          <span class="block text-[10px] uppercase tracking-[0.28em] text-champagne-400 font-semibold">THƯƠNG HIỆU AN NHIÊN AI</span>
+          <h1 class="font-museum text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-white group-hover:text-champagne-300 transition-colors">
+            THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN
+          </h1>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#trang-chu" onclick="navigateSection('trang-chu')" class="hover:text-champagne-400 transition-colors py-1">Trang Chủ</a>
+        <a href="#trien-lam" onclick="navigateSection('trien-lam')" class="hover:text-champagne-400 transition-colors py-1">Phòng Triển Lãm</a>
+        <a href="#bo-suu-tap" onclick="navigateSection('bo-suu-tap')" class="hover:text-champagne-400 transition-colors py-1">Bộ Sưu Tập</a>
+        <a href="#dich-vu-ai" onclick="navigateSection('dich-vu-ai')" class="hover:text-champagne-400 transition-colors py-1">Dịch Vụ & Đặt Ảnh</a>
+        <a href="#khoa-hoc-ai" onclick="navigateSection('khoa-hoc-ai')" class="hover:text-champagne-400 transition-colors py-1">Khóa Học AI</a>
+        <a href="#tac-gia" onclick="navigateSection('tac-gia')" class="hover:text-champagne-400 transition-colors py-1">Tác Giả & Liên Hệ</a>
+        <a href="#huong-dan-trien-khai" onclick="navigateSection('huong-dan-trien-khai')" class="hover:text-champagne-400 transition-colors py-1">Kiến Trúc & Hướng Dẫn</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <button id="btn-quick-upload" onclick="handleQuickUploadClick()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-champagne-500/40 bg-champagne-500/10 hover:bg-champagne-500/20 text-champagne-300 text-xs sm:text-sm font-medium transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+          <span>Tải Ảnh Lên</span>
+        </button>
+
+        <button id="btn-admin-portal" onclick="openAdminModal('artworks')" class="gold-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <span id="admin-btn-label">Quản Trị Viên</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="btn-mobile-menu" onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-lg border border-slate-700 text-slate-300 hover:text-white hover:border-champagne-400" aria-label="Mở menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden xl:hidden border-t border-champagne-500/20 bg-obsidian-900/95 px-4 pt-3 pb-5 space-y-2">
+      <div class="grid grid-cols-2 gap-2 text-sm">
+        <a href="#trang-chu" onclick="navigateSection('trang-chu'); toggleMobileMenu();" class="px-3 py-2 rounded-lg bg-obsidian-800/80 text-slate-200 hover:text-champagne-400">🏛️ Trang Chủ</a>
+        <a href="#trien-lam" onclick="navigateSection('trien-lam'); toggleMobileMenu();" class="px-3 py-2 rounded-lg bg-obsidian-800/80 text-slate-200 hover:text-champagne-400">🖼️ Phòng Triển Lãm</a>
+        <a href="#bo-suu-tap" onclick="navigateSection('bo-suu-tap'); toggleMobileMenu();" class="px-3 py-2 rounded-lg bg-obsidian-800/80 text-slate-200 hover:text-champagne-400">✨ Bộ Sưu Tập</a>
+        <a href="#dich-vu-ai" onclick="navigateSection('dich-vu-ai'); toggleMobileMenu();" class="px-3 py-2 rounded-lg bg-obsidian-800/80 text-slate-200 hover:text-champagne-400">🎨 Dịch Vụ Thiết Kế</a>
+        <a href="#khoa-hoc-ai" onclick="navigateSection('khoa-hoc-ai'); toggleMobileMenu();" class="px-3 py-2 rounded-lg bg-obsidian-800/80 text-slate-200 hover:text-champagne-400">🎓 Khóa Học AI</a>
+        <a href="#tac-gia" onclick="navigateSection('tac-gia'); toggleMobileMenu();" class="px-3 py-2 rounded-lg bg-obsidian-800/80 text-slate-200 hover:text-champagne-400">👩‍🎨 Tác Giả & Liên Hệ</a>
+        <a href="#huong-dan-trien-khai" onclick="navigateSection('huong-dan-trien-khai'); toggleMobileMenu();" class="col-span-2 px-3 py-2 rounded-lg bg-champagne-500/15 border border-champagne-500/30 text-champagne-300 font-medium">📘 Cấu Trúc Website, Lưu Trữ Đám Mây & Hướng Dẫn Triển Khai</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- ===================================================================== -->
+    <!-- SECTION 1: HERO EXHIBITION & FEATURED MASTERPIECES                    -->
+    <!-- ===================================================================== -->
+    <section id="trang-chu" class="relative museum-spotlight pt-8 pb-16 lg:py-20 border-b border-champagne-500/15 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Left Column: Brand Manifesto & Exhibition Introduction -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-champagne-500/10 border border-champagne-500/30 text-champagne-300 text-xs font-medium tracking-widest uppercase">
+              <span>✦ Triển Lãm Nghệ Thuật Thị Giác AI Đương Đại</span>
+            </div>
+
+            <h2 class="font-museum text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.12] tracking-tight">
+              <span class="block text-white">Nơi Trí Tuệ Nhân Tạo</span>
+              <span class="gold-gradient-text italic font-normal">Chạm Tới Tâm Hồn Việt</span>
+            </h2>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+              Chào mừng bạn đến với <strong class="text-champagne-300 font-medium">THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN</strong> — không gian lưu trữ, bảo tồn và trưng bày những tác phẩm nghệ thuật số độc bản thuộc thương hiệu <strong class="text-champagne-300 font-medium">An Nhiên AI</strong>. Mỗi bức hình là sự giao hòa giữa công nghệ tạo sinh tiên tiến, ánh sáng điện ảnh và chiều sâu mỹ cảm Á Đông.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
+              <button id="btn-hero-explore" onclick="navigateSection('trien-lam')" class="gold-btn px-6 py-3.5 rounded-xl text-sm sm:text-base inline-flex items-center gap-2.5 shadow-xl">
+                <span>Thưởng Lãm Thư Viện</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+              <button id="btn-hero-commission" onclick="openCommissionModal('Sáng tác tác phẩm AI độc bản theo yêu cầu')" class="px-5 py-3.5 rounded-xl border border-champagne-500/40 bg-obsidian-900/80 hover:bg-champagne-500/15 text-champagne-300 text-sm sm:text-base font-medium transition inline-flex items-center gap-2">
+                <span>Đặt Tạo Ảnh Nghệ Thuật</span>
+              </button>
+              <button id="btn-hero-upload" onclick="handleQuickUploadClick()" class="px-4 py-3.5 rounded-xl border border-slate-700 hover:border-champagne-400 text-slate-300 hover:text-white text-sm transition inline-flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                <span>Thêm Tác Phẩm Mới</span>
+              </button>
+            </div>
+
+            <!-- Live Gallery Metrics -->
+            <div class="grid grid-cols-4 gap-3 pt-4 border-t border-champagne-500/20">
+              <div class="p-3 rounded-xl bg-obsidian-900/60 border border-champagne-500/15">
+                <div id="stat-total-artworks" class="font-museum text-2xl sm:text-3xl font-bold text-champagne-400">9</div>
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">Tác phẩm</div>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-900/60 border border-champagne-500/15">
+                <div id="stat-total-categories" class="font-museum text-2xl sm:text-3xl font-bold text-champagne-400">9</div>
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">Chủ đề</div>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-900/60 border border-champagne-500/15">
+                <div class="font-museum text-2xl sm:text-3xl font-bold text-champagne-400">4</div>
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">Tỷ lệ chuẩn</div>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-900/60 border border-champagne-500/15">
+                <div id="stat-featured-count" class="font-museum text-2xl sm:text-3xl font-bold text-emerald-400">5</div>
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">Tiêu biểu</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Hero Cover Artwork Frame -->
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl p-3 sm:p-4 bg-gradient-to-b from-champagne-500/25 via-obsidian-800 to-obsidian-900 border border-champagne-500/40 shadow-2xl">
+              <div class="relative rounded-xl overflow-hidden ratio-16-9 group cursor-pointer" onclick="openLightboxById('art-01')">
+                <img id="hero-cover-img" data-asset="landscape" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Bình Minh Liên Đầm Tràng An - Tác phẩm tiêu biểu An Nhiên AI" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950/90 via-obsidian-950/20 to-transparent"></div>
+
+                <!-- Top Exhibition Tag -->
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span class="px-3 py-1 rounded-full text-xs font-medium bg-obsidian-950/80 backdrop-blur-md text-champagne-300 border border-champagne-500/30">
+                    ★ Tác Phẩm Ảnh Bìa Triển Lãm • 16:9 Cinema
+                  </span>
+                  <span class="px-2.5 py-1 rounded-full text-xs bg-obsidian-950/80 text-white backdrop-blur-md">
+                    Nhấn để phóng to 4K
+                  </span>
+                </div>
+
+                <!-- Bottom Plaque -->
+                <div class="absolute bottom-3 left-3 right-3 p-4 rounded-xl bg-obsidian-950/80 backdrop-blur-md border border-champagne-500/25 flex items-end justify-between gap-4">
+                  <div>
+                    <p class="text-[11px] uppercase tracking-widest text-champagne-400">Bộ Sưu Tập Phong Cảnh & Linh Hồn Việt</p>
+                    <h3 id="hero-cover-title" class="font-museum text-xl sm:text-2xl font-bold text-white mt-0.5">Bình Minh Liên Đầm Tràng An</h3>
+                    <p id="hero-cover-desc" class="text-xs text-slate-300 line-clamp-1 mt-1">Ánh bình minh vàng kim phủ trên đầm sen cổ và dãy núi đá vôi mờ sương.</p>
+                  </div>
+                  <span class="shrink-0 w-10 h-10 rounded-full bg-champagne-500 text-obsidian-950 flex items-center justify-center font-bold shadow-lg">
+                    ↗
+                  </span>
+                </div>
+              </div>
+
+              <!-- Featured Strip Thumbnails below Hero -->
+              <div class="mt-4">
+                <div class="flex items-center justify-between text-xs text-slate-400 mb-2 px-1">
+                  <span class="uppercase tracking-wider font-semibold text-champagne-300">✦ Tác Phẩm Tiêu Biểu (Curator's Spotlight)</span>
+                  <span>Chọn ảnh để đổi ảnh bìa hoặc xem chi tiết</span>
+                </div>
+                <div id="hero-featured-strip" class="grid grid-cols-5 gap-2.5">
+                  <!-- Populated dynamically by JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 2: MAIN EXHIBITION GALLERY (SEARCH, FILTER, MASONRY/FRAMES)   -->
+    <!-- ===================================================================== -->
+    <section id="trien-lam" class="py-14 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-champagne-400 font-semibold">KHÔNG GIAN TRƯNG BÀY CHÍNH</span>
+          <h2 class="font-museum text-3xl sm:text-4xl lg:text-5xl font-bold mt-1">Phòng Triển Lãm Nghệ Thuật AI</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+            Hỗ trợ tự động sắp xếp bố cục thông minh cho mọi tỷ lệ khung hình: <span class="text-champagne-300">Ngang 16:9</span>, <span class="text-champagne-300">Dọc 9:16</span>, <span class="text-champagne-300">Vuông 1:1</span> và <span class="text-champagne-300">Chân dung 3:4</span>.
+          </p>
+        </div>
+
+        <!-- Layout Mode Switcher -->
+        <div class="flex flex-wrap items-center gap-2 bg-obsidian-900 p-1.5 rounded-xl border border-champagne-500/25 self-start">
+          <button id="view-btn-masonry" onclick="setGalleryViewMode('masonry')" class="px-3.5 py-2 rounded-lg text-xs font-semibold transition bg-champagne-500 text-obsidian-950">
+            ⊞ Lưới Nghệ Thuật Tự Động
+          </button>
+          <button id="view-btn-museum" onclick="setGalleryViewMode('museum')" class="px-3.5 py-2 rounded-lg text-xs font-semibold transition text-slate-300 hover:text-white">
+            🖼️ Khung Bảo Tàng Quốc Tế
+          </button>
+          <button id="view-btn-list" onclick="setGalleryViewMode('list')" class="px-3.5 py-2 rounded-lg text-xs font-semibold transition text-slate-300 hover:text-white">
+            ☰ Danh Mục Chi Tiết
+          </button>
+        </div>
+      </div>
+
+      <!-- Search, Aspect Ratio & Sort Toolbar -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-obsidian-900/90 border border-champagne-500/20 shadow-xl space-y-4 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-3.5 items-center">
+          <!-- Search Input -->
+          <div class="md:col-span-5 relative">
+            <svg class="w-4 h-4 text-champagne-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input id="gallery-search-input" type="text" oninput="handleGallerySearch(this.value)" placeholder="Tìm tên tác phẩm, mô tả, từ khóa (#sen, #aodai, #mv)..." class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700/80 focus:border-champagne-400 focus:outline-none text-sm text-white placeholder-slate-500">
+            <button id="btn-clear-search" onclick="clearGalleryFilters()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white" title="Xóa tìm kiếm">✕</button>
+          </div>
+
+          <!-- Aspect Ratio Filter -->
+          <div class="md:col-span-4 flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0">
+            <span class="text-xs text-slate-400 shrink-0 mr-1">Tỷ lệ:</span>
+            <button id="ratio-btn-all" onclick="setAspectRatioFilter('all')" class="ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-champagne-500/20 text-champagne-300 border border-champagne-500/40 shrink-0">Tất cả</button>
+            <button id="ratio-btn-16-9" onclick="setAspectRatioFilter('16:9')" class="ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-950 text-slate-300 border border-slate-800 hover:border-champagne-500/30 shrink-0">16:9 Ngang</button>
+            <button id="ratio-btn-9-16" onclick="setAspectRatioFilter('9:16')" class="ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-950 text-slate-300 border border-slate-800 hover:border-champagne-500/30 shrink-0">9:16 Dọc</button>
+            <button id="ratio-btn-1-1" onclick="setAspectRatioFilter('1:1')" class="ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-950 text-slate-300 border border-slate-800 hover:border-champagne-500/30 shrink-0">1:1 Vuông</button>
+            <button id="ratio-btn-3-4" onclick="setAspectRatioFilter('3:4')" class="ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-950 text-slate-300 border border-slate-800 hover:border-champagne-500/30 shrink-0">3:4 Chân dung</button>
+          </div>
+
+          <!-- Sort Selector -->
+          <div class="md:col-span-3 flex items-center gap-2">
+            <label for="gallery-sort-select" class="text-xs text-slate-400 shrink-0">Sắp xếp:</label>
+            <select id="gallery-sort-select" onchange="handleGallerySort(this.value)" class="w-full px-3 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700/80 focus:border-champagne-400 focus:outline-none text-xs sm:text-sm text-white">
+              <option value="custom">Thứ tự Triển lãm (Chuẩn)</option>
+              <option value="newest">Ngày sáng tạo: Mới nhất</option>
+              <option value="oldest">Ngày sáng tạo: Cũ nhất</option>
+              <option value="featured">Tác phẩm Tiêu biểu trước</option>
+              <option value="title-asc">Tên tác phẩm: A → Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 9 Thematic Categories Filter Pills -->
+        <div class="pt-2 border-t border-slate-800/80">
+          <div id="category-pills-container" class="flex items-center gap-2 overflow-x-auto pb-1.5">
+            <!-- Populated dynamically by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Filter Status Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-6 text-xs text-slate-400">
+        <div>
+          Đang trưng bày <strong id="showing-count-label" class="text-champagne-300">9</strong> tác phẩm
+          <span id="active-filter-summary" class="ml-1 text-slate-400">trong tất cả chủ đề</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="btn-reset-filters" onclick="clearGalleryFilters()" class="text-champagne-400 hover:underline">Đặt lại bộ lọc</button>
+          <span>•</span>
+          <button id="btn-export-catalog-quick" onclick="exportGalleryCatalogJSON()" class="text-emerald-400 hover:underline flex items-center gap-1">
+            <span>⬇ Xuất file dữ liệu JSON (GitHub Pages)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MAIN ARTWORK GRID CONTAINER -->
+      <div id="gallery-grid-container" class="exhibition-masonry">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="gallery-empty-state" class="hidden text-center py-16 px-4 rounded-2xl bg-obsidian-900/60 border border-dashed border-champagne-500/30">
+        <div class="text-4xl mb-3">🖼️</div>
+        <h3 class="font-museum text-2xl font-bold text-white">Không tìm thấy tác phẩm phù hợp</h3>
+        <p class="text-slate-400 text-sm mt-1 max-w-md mx-auto">Hãy thử từ khóa khác, chọn lại danh mục chủ đề hoặc tải lên tác phẩm AI mới của bạn.</p>
+        <div class="mt-5 flex justify-center gap-3">
+          <button id="btn-empty-reset" onclick="clearGalleryFilters()" class="px-4 py-2 rounded-xl border border-champagne-500/40 text-champagne-300 text-xs font-medium">Xem tất cả tác phẩm</button>
+          <button id="btn-empty-upload" onclick="handleQuickUploadClick()" class="gold-btn px-4 py-2 rounded-xl text-xs font-semibold">+ Tải ảnh mới lên</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 3: CURATED THEMATIC COLLECTIONS (9 CHỦ ĐỀ TRIỂN LÃM)          -->
+    <!-- ===================================================================== -->
+    <section id="bo-suu-tap" class="py-16 bg-obsidian-900/60 border-y border-champagne-500/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-[0.25em] text-champagne-400 font-semibold">9 PHÒNG TRƯNG BÀY CHUYÊN ĐỀ</span>
+          <h2 class="font-museum text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">Các Bộ Sưu Tập Nghệ Thuật An Nhiên AI</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Mỗi bộ sưu tập là một hành trình thị giác riêng biệt, được phân loại khoa học để phục vụ thưởng lãm, tra cứu ý tưởng và giới thiệu năng lực sáng tạo.
+          </p>
+        </div>
+
+        <div id="collections-showcase-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically by JS for all 9 categories -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 4: CREATIVE SERVICES & AI ART COMMISSION STUDIO               -->
+    <!-- ===================================================================== -->
+    <section id="dich-vu-ai" class="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-champagne-400 font-semibold">AN NHIÊN AI CREATIVE STUDIO</span>
+          <h2 class="font-museum text-3xl sm:text-4xl lg:text-5xl font-bold mt-1">Dịch Vụ Sáng Tạo & Thiết Kế Hình Ảnh AI</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+            Nhận yêu cầu sáng tác hình ảnh nghệ thuật độc bản, thiết kế bộ nhận diện MV ca nhạc Suno/YouTube, phục chế ảnh cổ gia đình và thiết kế ấn phẩm thương hiệu.
+          </p>
+        </div>
+        <button id="btn-open-custom-commission" onclick="openCommissionModal('Yêu cầu thiết kế riêng')" class="gold-btn px-5 py-3 rounded-xl text-sm self-start lg:self-auto">
+          ✦ Gửi Yêu Cầu Đặt Hàng Tác Phẩm
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Service 1 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-champagne-500/20 flex flex-col justify-between hover:border-champagne-400 transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-2xl mb-4">👑</div>
+            <span class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">Dịch vụ Cao cấp</span>
+            <h3 class="font-museum text-2xl font-bold text-white mt-1">Chân Dung & Nghệ Thuật Độc Bản</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Sáng tác chân dung nghệ thuật, thời trang cổ phục Việt, tranh màu nước và tác phẩm trưng bày in canvas chất lượng bảo tàng 8K.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li>✓ Giữ nét nhân vật tham chiếu chuẩn xác</li>
+              <li>✓ Bố cục ánh sáng điện ảnh & màu sắc tinh tế</li>
+              <li>✓ Bàn giao file gốc độ phân giải siêu cao</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-xs text-champagne-300 font-semibold">Theo gói / Tác phẩm</span>
+            <button id="btn-srv-1" onclick="openCommissionModal('Chân Dung & Nghệ Thuật Độc Bản')" class="px-3.5 py-2 rounded-lg bg-champagne-500/15 hover:bg-champagne-500 text-champagne-300 hover:text-obsidian-950 text-xs font-semibold transition">Đặt dịch vụ →</button>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-champagne-500/20 flex flex-col justify-between hover:border-champagne-400 transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-2xl mb-4">🎵</div>
+            <span class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">An Nhiên AI Music Visuals</span>
+            <h3 class="font-museum text-2xl font-bold text-white mt-1">Ảnh Bìa & Visual MV Ca Nhạc</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Thiết kế trọn bộ ảnh bìa 16:9 YouTube, 9:16 Reels/TikTok, Poster phát hành nhạc và chuỗi ảnh keyframe đồng nhất cho MV ca nhạc AI.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li>✓ Bộ đôi ảnh bìa chuẩn 16:9 và 9:16</li>
+              <li>✓ Đồng bộ cảm xúc âm nhạc & ca từ</li>
+              <li>✓ Tối ưu thu hút thị giác (CTR cao)</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-xs text-champagne-300 font-semibold">Trọn bộ MV / Single</span>
+            <button id="btn-srv-2" onclick="openCommissionModal('Ảnh Bìa & Visual MV Ca Nhạc')" class="px-3.5 py-2 rounded-lg bg-champagne-500/15 hover:bg-champagne-500 text-champagne-300 hover:text-obsidian-950 text-xs font-semibold transition">Đặt dịch vụ →</button>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-champagne-500/20 flex flex-col justify-between hover:border-champagne-400 transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-2xl mb-4">🕰️</div>
+            <span class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">Bảo tồn Di sản & Ký ức</span>
+            <h3 class="font-museum text-2xl font-bold text-white mt-1">Phục Chế Ảnh Cổ & Kỷ Niệm</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Khôi phục ảnh xưa bị mờ, ố vàng, rách nát; lên màu tự nhiên chuẩn lịch sử và tái tạo thần thái chân thực cho ảnh thờ, ảnh gia tộc.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li>✓ Giữ nguyên 100% thần thái gương mặt gốc</li>
+              <li>✓ Tái tạo chi tiết trang phục & bối cảnh xưa</li>
+              <li>✓ Sẵn sàng in khổ lớn đóng khung trang trọng</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-xs text-champagne-300 font-semibold">Tư vấn theo tình trạng ảnh</span>
+            <button id="btn-srv-3" onclick="openCommissionModal('Phục Chế Ảnh Cổ & Kỷ Niệm')" class="px-3.5 py-2 rounded-lg bg-champagne-500/15 hover:bg-champagne-500 text-champagne-300 hover:text-obsidian-950 text-xs font-semibold transition">Đặt dịch vụ →</button>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-champagne-500/20 flex flex-col justify-between hover:border-champagne-400 transition">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-2xl mb-4">✨</div>
+            <span class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">Thương hiệu Cá nhân</span>
+            <h3 class="font-museum text-2xl font-bold text-white mt-1">Poster & Nhận Diện Thương Hiệu AI</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Thiết kế bộ hình ảnh nhân vật đại diện, poster sự kiện, banner truyền thông và xây dựng thư viện hình ảnh thương hiệu cá nhân đồng bộ.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li>✓ Định hình phong cách mỹ thuật riêng biệt</li>
+              <li>✓ Bộ quy chuẩn Prompt & màu sắc thương hiệu</li>
+              <li>✓ Hỗ trợ cài đặt thư viện ảnh triển lãm riêng</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-xs text-champagne-300 font-semibold">Gói Doanh nhân / Nghệ sĩ</span>
+            <button id="btn-srv-4" onclick="openCommissionModal('Poster & Nhận Diện Thương Hiệu AI')" class="px-3.5 py-2 rounded-lg bg-champagne-500/15 hover:bg-champagne-500 text-champagne-300 hover:text-obsidian-950 text-xs font-semibold transition">Đặt dịch vụ →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 5: AI ART & MUSIC ACADEMY (GIỚI THIỆU KHÓA HỌC AI)            -->
+    <!-- ===================================================================== -->
+    <section id="khoa-hoc-ai" class="py-16 lg:py-20 bg-obsidian-900/70 border-y border-champagne-500/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-[0.25em] text-champagne-400 font-semibold">HỌC VIỆN SÁNG TẠO AN NHIÊN AI</span>
+          <h2 class="font-museum text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">Các Khóa Học Làm Chủ Nghệ Thuật AI</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Phương pháp đào tạo thực chiến, cầm tay chỉ việc, giúp bạn tự tay sáng tạo những tác phẩm hình ảnh và âm nhạc AI mang đậm dấu ấn cá nhân.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <!-- Course 1 -->
+          <div class="rounded-2xl overflow-hidden bg-obsidian-950 border border-champagne-500/25 flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="h-48 relative overflow-hidden">
+                <img data-asset="portrait" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Khóa học Nghệ Thuật Chân Dung & Nhiếp Ảnh AI" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/30 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold bg-champagne-500 text-obsidian-950">Khóa học Tiêu biểu</span>
+              </div>
+              <div class="p-6">
+                <div class="text-xs text-champagne-400 font-medium">12 Chuyên đề • Kèm bộ 500+ Master Prompts</div>
+                <h3 class="font-museum text-2xl font-bold text-white mt-1">Nghệ Thuật Nhiếp Ảnh & Chân Dung AI Cao Cấp</h3>
+                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                  Làm chủ kỹ thuật điều khiển ánh sáng Rembrandt, bố cục điện ảnh, chất liệu lụa Việt, màu nước và giữ đồng nhất gương mặt nhân vật qua nhiều bối cảnh.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-slate-800/80 flex items-center justify-between">
+              <span class="text-xs text-emerald-400 font-medium">● Đang mở đăng ký</span>
+              <button id="btn-course-1" onclick="openCourseModal('Nghệ Thuật Nhiếp Ảnh & Chân Dung AI Cao Cấp')" class="gold-btn px-4 py-2 rounded-xl text-xs">Nhận tư vấn & Đề cương</button>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="rounded-2xl overflow-hidden bg-obsidian-950 border border-champagne-500/25 flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="h-48 relative overflow-hidden">
+                <img data-asset="mv" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Khóa học Đạo Diễn Hình Ảnh MV & Âm Nhạc Suno AI" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/30 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500 text-obsidian-950">Thực chiến All-in-One</span>
+              </div>
+              <div class="p-6">
+                <div class="text-xs text-champagne-400 font-medium">10 Chuyên đề • Âm nhạc & Điện ảnh AI</div>
+                <h3 class="font-museum text-2xl font-bold text-white mt-1">Đạo Diễn Hình Ảnh MV & Sản Xuất Âm Nhạc AI</h3>
+                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                  Từ sáng tác ca khúc trữ tình chuẩn thanh điệu trên Suno AI đến thiết kế chuỗi hình ảnh storyboard, poster, ảnh bìa và chuyển động video điện ảnh.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-slate-800/80 flex items-center justify-between">
+              <span class="text-xs text-emerald-400 font-medium">● Đang mở đăng ký</span>
+              <button id="btn-course-2" onclick="openCourseModal('Đạo Diễn Hình Ảnh MV & Sản Xuất Âm Nhạc AI')" class="gold-btn px-4 py-2 rounded-xl text-xs">Nhận tư vấn & Đề cương</button>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="rounded-2xl overflow-hidden bg-obsidian-950 border border-champagne-500/25 flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="h-48 relative overflow-hidden">
+                <img data-asset="fashion" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Khóa học Xây Dựng Thương Hiệu Cá Nhân Với AI" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/30 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold bg-purple-400 text-obsidian-950">Dành cho Chuyên gia</span>
+              </div>
+              <div class="p-6">
+                <div class="text-xs text-champagne-400 font-medium">8 Chuyên đề • Thương hiệu & Tự động hóa</div>
+                <h3 class="font-museum text-2xl font-bold text-white mt-1">Phục Chế Ảnh Cổ & Xây Dựng Thương Hiệu Số Với AI</h3>
+                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                  Quy trình phục chế ảnh xưa chất lượng cao, thiết kế bộ tranh thêu/màu nước nghệ thuật và xây dựng website triển lãm cá nhân chuyên nghiệp.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-slate-800/80 flex items-center justify-between">
+              <span class="text-xs text-emerald-400 font-medium">● Đang mở đăng ký</span>
+              <button id="btn-course-3" onclick="openCourseModal('Phục Chế Ảnh Cổ & Xây Dựng Thương Hiệu Số Với AI')" class="gold-btn px-4 py-2 rounded-xl text-xs">Nhận tư vấn & Đề cương</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 6: AUTHOR PROFILE, BRAND STORY & SOCIAL SHARE / CONTACT       -->
+    <!-- ===================================================================== -->
+    <section id="tac-gia" class="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <!-- Artist Profile Card -->
+        <div class="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-obsidian-900 border border-champagne-500/30 shadow-2xl space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-20 h-20 rounded-2xl overflow-hidden border-2 border-champagne-400 shrink-0">
+              <img data-asset="portrait" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Tác giả An Nhiên AI" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-widest text-champagne-400 font-semibold">NGHỆ SĨ SÁNG TẠO & NHÀ SÁNG LẬP</span>
+              <h3 class="font-museum text-3xl font-bold text-white">An Nhiên AI</h3>
+              <p class="text-xs text-slate-400 mt-0.5">Đạo diễn Hình ảnh & Âm nhạc AI • Giảng viên Sáng tạo Số</p>
+            </div>
+          </div>
+
+          <blockquote class="p-4 rounded-xl bg-obsidian-950/90 border-l-4 border-champagne-500 font-museum italic text-lg text-champagne-300 leading-relaxed">
+            “Trí tuệ nhân tạo không thay thế trái tim người nghệ sĩ — nó là cây cọ ánh sáng giúp những ký ức, giai điệu và vẻ đẹp bình yên của tâm hồn được hiện hữu sống động hơn bao giờ hết.”
+          </blockquote>
+
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Thương hiệu <strong class="text-white">An Nhiên AI</strong> ra đời với sứ mệnh kết hợp công nghệ AI hiện đại cùng chiều sâu văn hóa, thiên nhiên và con người Việt Nam. Từ những bức chân dung nghệ thuật, tranh thủy mặc hoa sen, ảnh phục chế di sản gia đình cho đến những khung hình MV ca nhạc đầy chất thơ, mỗi tác phẩm đều được chăm chút tỉ mỉ như một hiện vật triển lãm.
+          </p>
+
+          <!-- Social Share Bar (Facebook, Zalo, Copy Link) -->
+          <div class="pt-4 border-t border-slate-800 space-y-3">
+            <div class="text-xs font-semibold uppercase tracking-wider text-champagne-400">Chia Sẻ Phòng Triển Lãm Lên Mạng Xã Hội:</div>
+            <div class="flex flex-wrap gap-2.5">
+              <button id="btn-share-fb-main" onclick="shareGallerySocial('facebook')" class="px-3.5 py-2 rounded-xl bg-[#1877F2]/20 hover:bg-[#1877F2] text-blue-300 hover:text-white border border-[#1877F2]/40 text-xs font-medium transition flex items-center gap-1.5">
+                <span>📘 Chia sẻ Facebook</span>
+              </button>
+              <button id="btn-share-zalo-main" onclick="shareGallerySocial('zalo')" class="px-3.5 py-2 rounded-xl bg-[#0068FF]/20 hover:bg-[#0068FF] text-sky-300 hover:text-white border border-[#0068FF]/40 text-xs font-medium transition flex items-center gap-1.5">
+                <span>💬 Chia sẻ Zalo</span>
+              </button>
+              <button id="btn-share-copy-main" onclick="shareGallerySocial('copy')" class="px-3.5 py-2 rounded-xl bg-champagne-500/15 hover:bg-champagne-500 text-champagne-300 hover:text-obsidian-950 border border-champagne-500/30 text-xs font-medium transition flex items-center gap-1.5">
+                <span>🔗 Sao chép Link Triển lãm</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Contact & Collaboration Form -->
+        <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-obsidian-900 border border-champagne-500/20 shadow-xl">
+          <span class="text-xs uppercase tracking-widest text-champagne-400 font-semibold">KẾT NỐI TRỰC TIẾP VỚI TÁC GIẢ</span>
+          <h3 class="font-museum text-3xl font-bold text-white mt-1">Gửi Lời Nhắn, Hợp Tác Hoặc Yêu Cầu Sáng Tạo</h3>
+          <p class="text-slate-400 text-sm mt-1 mb-6">
+            Mọi tin nhắn, yêu cầu đặt tạo ảnh nghệ thuật hoặc đăng ký khóa học đều được lưu trữ trực tiếp vào hệ thống Quản trị để phản hồi nhanh nhất.
+          </p>
+
+          <form id="contact-author-form" onsubmit="handleContactFormSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contact-name" class="block text-xs text-slate-300 mb-1.5">Họ và tên của bạn *</label>
+                <input id="contact-name" type="text" required placeholder="Nhập họ và tên..." class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white">
+              </div>
+              <div>
+                <label for="contact-phone" class="block text-xs text-slate-300 mb-1.5">Số điện thoại / Zalo hoặc Email *</label>
+                <input id="contact-phone" type="text" required placeholder="SĐT Zalo hoặc địa chỉ Email..." class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contact-topic" class="block text-xs text-slate-300 mb-1.5">Chủ đề quan tâm</label>
+                <select id="contact-topic" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white">
+                  <option value="Đặt sáng tác ảnh nghệ thuật AI">Đặt sáng tác ảnh nghệ thuật AI</option>
+                  <option value="Thiết kế ảnh bìa & Visual MV Ca nhạc">Thiết kế ảnh bìa & Visual MV Ca nhạc</option>
+                  <option value="Phục chế ảnh cổ gia đình">Phục chế ảnh cổ gia đình</option>
+                  <option value="Tư vấn Khóa học An Nhiên AI">Tư vấn Khóa học An Nhiên AI</option>
+                  <option value="Xin cấp phép tải ảnh gốc độ phân giải cao">Xin cấp phép tải ảnh gốc độ phân giải cao</option>
+                  <option value="Giao lưu & Hợp tác thương hiệu">Giao lưu & Hợp tác thương hiệu</option>
+                </select>
+              </div>
+              <div>
+                <label for="contact-ratio-pref" class="block text-xs text-slate-300 mb-1.5">Tỷ lệ / Định dạng mong muốn</label>
+                <select id="contact-ratio-pref" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white">
+                  <option value="Tư vấn theo nhu cầu">Tư vấn theo nhu cầu sử dụng</option>
+                  <option value="16:9 Ngang (YouTube / Màn hình lớn)">16:9 Ngang (YouTube / Màn hình rộng)</option>
+                  <option value="9:16 Dọc (Reels / TikTok / Điện thoại)">9:16 Dọc (Reels / TikTok / Điện thoại)</option>
+                  <option value="1:1 Vuông & 3:4 Chân dung">1:1 Vuông & 3:4 Chân dung in tranh</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs text-slate-300 mb-1.5">Nội dung chi tiết / Ý tưởng mong muốn *</label>
+              <textarea id="contact-message" rows="4" required placeholder="Mô tả ý tưởng bức ảnh, phong cách mong muốn hoặc câu hỏi của bạn dành cho An Nhiên AI..." class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white"></textarea>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+              <span class="text-xs text-slate-400">🔒 Thông tin được bảo mật và lưu trữ an toàn.</span>
+              <button id="btn-submit-contact" type="submit" class="gold-btn px-6 py-3 rounded-xl text-sm shadow-lg">
+                Gửi Yêu Cầu Tới An Nhiên AI
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 7: ARCHITECTURE, CLOUD STORAGE & STEP-BY-STEP GUIDE           -->
+    <!-- ===================================================================== -->
+    <section id="huong-dan-trien-khai" class="py-16 bg-obsidian-900/80 border-t border-champagne-500/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] text-champagne-400 font-semibold">TÀI LIỆU KỸ THUẬT & VẬN HÀNH HỆ THỐNG</span>
+            <h2 class="font-museum text-3xl sm:text-4xl font-bold text-white mt-1">Cấu Trúc Website, Lưu Trữ Đám Mây & Hướng Dẫn Triển Khai</h2>
+          </div>
+          <button id="btn-open-cloud-config-guide" onclick="openAdminModal('cloud')" class="px-4 py-2.5 rounded-xl border border-champagne-500/40 bg-champagne-500/10 text-champagne-300 text-xs font-semibold hover:bg-champagne-500 hover:text-obsidian-950 transition">
+            ⚙️ Mở Bảng Kết Nối Lưu Trữ Đám Mây
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Card 1: Directory Structure -->
+          <div class="p-6 rounded-2xl bg-obsidian-950 border border-slate-800 space-y-3">
+            <div class="text-xs font-bold uppercase tracking-wider text-champagne-400">1. Tổ Chức Thư Mục Chuẩn GitHub Pages</div>
+            <pre class="text-xs text-emerald-300 bg-obsidian-900 p-3.5 rounded-xl overflow-x-auto leading-relaxed font-mono">thu-vien-ai-an-nhien/
+├── index.html               # Giao diện chính
+├── CNAME                    # Tên miền riêng
+├── css/
+│   └── exhibition.css       # Hệ thống giao diện
+├── js/
+│   ├── cloud-storage.js     # Kết nối Đám mây
+│   └── gallery-app.js       # Xử lý Thư viện & Admin
+├── data/
+│   └── gallery-catalog.json # Cơ sở dữ liệu ảnh
+└── assets/
+    └── images/
+        ├── originals/       # Ảnh gốc chất lượng cao
+        └── thumbnails/      # Ảnh thu nhỏ tốc độ cao</pre>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Website hoạt động hoàn hảo ở cả 2 chế độ: <strong>Single-File độc lập</strong> và <strong>Cấu trúc thư mục chuẩn GitHub Pages</strong>.
+            </p>
+          </div>
+
+          <!-- Card 2: Sustainable Cloud Storage Architecture -->
+          <div class="p-6 rounded-2xl bg-obsidian-950 border border-slate-800 space-y-3">
+            <div class="text-xs font-bold uppercase tracking-wider text-champagne-400">2. Phương Án Lưu Trữ Ảnh Thực Tế & Bền Vững</div>
+            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+              <li>
+                <strong class="text-white">• Tầng 1 – Cloudinary CDN (Miễn phí 25GB):</strong> Lưu trữ file ảnh gốc & tự động tạo ảnh thu nhỏ (Thumbnail WebP/AVIF) siêu tốc qua API trực tiếp đã tích hợp sẵn trong khu Quản trị.
+              </li>
+              <li>
+                <strong class="text-white">• Tầng 2 – Đồng bộ GitHub Repository API / Firebase / Supabase:</strong> Khi thêm/sửa/xóa tác phẩm trong mục Quản trị, hệ thống tự động đẩy file <code class="text-champagne-300">data/gallery-catalog.json</code> lên kho lưu trữ đám mây để mọi khách truy cập đều thấy ngay lập tức.
+              </li>
+              <li>
+                <strong class="text-white">• Tầng 3 – IndexedDB Dung Lượng Lớn:</strong> Cơ sở dữ liệu bền vững ngay trên thiết bị, không bị giới hạn 5MB như bộ nhớ tạm thông thường.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: 4-Step Deployment Guide -->
+          <div class="p-6 rounded-2xl bg-obsidian-950 border border-slate-800 space-y-3">
+            <div class="text-xs font-bold uppercase tracking-wider text-champagne-400">3. Hướng Dẫn Vận Hành & Đưa Lên Tên Miền Riêng</div>
+            <ol class="space-y-2 text-xs text-slate-300 leading-relaxed list-decimal list-inside">
+              <li><strong class="text-white">Đăng nhập Quản trị:</strong> Nhấn nút <em>Quản Trị Viên</em> (Mật khẩu mặc định: <code class="text-champagne-300">AnNhien2026!</code>) để tải nhiều ảnh lên cùng lúc, sửa thông tin, sắp xếp thứ tự hoặc đổi mật khẩu.</li>
+              <li><strong class="text-white">Kết nối Cloudinary (Tùy chọn):</strong> Nhập <em>Cloud Name</em> và <em>Upload Preset</em> trong tab Đám Mây để ảnh tải lên được lưu trữ vĩnh viễn trên CDN quốc tế.</li>
+              <li><strong class="text-white">Triển khai GitHub Pages:</strong> Tải bộ mã nguồn lên Repository GitHub → Vào <em>Settings → Pages</em> → Chọn nhánh <code class="text-champagne-300">main</code>.</li>
+              <li><strong class="text-white">Gắn tên miền riêng:</strong> Trỏ 4 bản ghi <code class="text-champagne-300">A</code> về IP GitHub Pages và điền tên miền (VD: <code class="text-champagne-300">trienlam.annhienai.vn</code>) vào mục Custom Domain.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================= -->
+  <!-- FOOTER                                                                  -->
+  <!-- ======================================================================= -->
+  <footer class="bg-obsidian-950 border-t border-champagne-500/20 py-12 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-champagne-500 text-obsidian-950 font-museum font-bold text-lg flex items-center justify-center">AN</div>
+        <div>
+          <div class="text-white font-semibold">THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN</div>
+          <div>© 2026 Thương hiệu An Nhiên AI. Bảo lưu mọi quyền sở hữu trí tuệ và tác phẩm nghệ thuật.</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#trang-chu" onclick="navigateSection('trang-chu')" class="hover:text-champagne-400">Trang chủ</a>
+        <a href="#trien-lam" onclick="navigateSection('trien-lam')" class="hover:text-champagne-400">Triển lãm</a>
+        <a href="#dich-vu-ai" onclick="navigateSection('dich-vu-ai')" class="hover:text-champagne-400">Dịch vụ AI</a>
+        <a href="#khoa-hoc-ai" onclick="navigateSection('khoa-hoc-ai')" class="hover:text-champagne-400">Khóa học</a>
+        <button id="btn-footer-admin" onclick="openAdminModal('artworks')" class="text-champagne-400 hover:underline">Quản trị Thư viện</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- MODAL 1: FULL-SCREEN EXHIBITION LIGHTBOX (ZOOM, PAN, PREV/NEXT, DL)     -->
+  <!-- ======================================================================= -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-obsidian-950/95 backdrop-blur-2xl flex flex-col">
+    <!-- Lightbox Top Control Bar -->
+    <div class="h-16 px-4 sm:px-6 border-b border-champagne-500/20 flex items-center justify-between gap-3 bg-obsidian-950/90 shrink-0">
+      <div class="flex items-center gap-3 min-w-0">
+        <span id="lb-category-badge" class="px-3 py-1 rounded-full text-xs font-medium bg-champagne-500/15 text-champagne-300 border border-champagne-500/30 shrink-0">Chủ đề</span>
+        <h3 id="lb-title-header" class="font-museum text-lg sm:text-2xl font-bold text-white truncate">Tên tác phẩm</h3>
+        <span id="lb-counter-badge" class="text-xs text-slate-400 shrink-0">(1 / 9)</span>
+      </div>
+
+      <!-- Zoom & Fullscreen Controls -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <button id="btn-lb-zoom-out" onclick="adjustLightboxZoom(-0.4)" class="px-2.5 py-1.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-slate-200 text-xs font-bold" title="Thu nhỏ (-)">−</button>
+        <span id="lb-zoom-level" class="text-xs font-mono text-champagne-300 w-12 text-center">100%</span>
+        <button id="btn-lb-zoom-in" onclick="adjustLightboxZoom(0.4)" class="px-2.5 py-1.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-slate-200 text-xs font-bold" title="Phóng to (+)">+</button>
+        <button id="btn-lb-zoom-reset" onclick="resetLightboxZoom()" class="px-2.5 py-1.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-slate-300 text-xs" title="Khôi phục 100%">1:1</button>
+        <button id="btn-lb-fullscreen" onclick="toggleBrowserFullscreen()" class="hidden sm:inline-flex px-2.5 py-1.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-slate-300 text-xs" title="Toàn màn hình">⛶</button>
+        <button id="btn-lb-toggle-info" onclick="toggleLightboxSidebar()" class="px-3 py-1.5 rounded-lg border border-champagne-500/30 text-champagne-300 text-xs font-medium hover:bg-champagne-500/15">Thông tin</button>
+        <button id="btn-lb-close" onclick="closeLightbox()" class="ml-1 w-9 h-9 rounded-xl bg-rose-500/20 hover:bg-rose-500 text-rose-300 hover:text-white flex items-center justify-center font-bold transition" title="Đóng (Esc)">✕</button>
+      </div>
+    </div>
+
+    <!-- Lightbox Main Body: Interactive Stage + Metadata Sidebar -->
+    <div class="flex-grow flex flex-col lg:flex-row overflow-hidden relative">
+      <!-- Image Stage -->
+      <div id="lb-stage-container" class="lightbox-stage flex-grow relative flex items-center justify-center overflow-hidden bg-black/60 p-4 sm:p-8" onwheel="handleLightboxWheel(event)" onmousedown="startLightboxPan(event)" onmousemove="moveLightboxPan(event)" onmouseup="endLightboxPan()" onmouseleave="endLightboxPan()">
+        <!-- Prev Button -->
+        <button id="btn-lb-prev" onclick="event.stopPropagation(); navigateLightbox(-1);" class="absolute left-3 sm:left-6 z-20 w-11 h-11 rounded-full bg-obsidian-900/85 hover:bg-champagne-500 text-white hover:text-obsidian-950 border border-champagne-500/30 flex items-center justify-center text-lg shadow-xl transition" title="Ảnh trước (←)">
+          ❮
+        </button>
+
+        <img id="lb-main-image" data-asset="landscape" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Tác phẩm triển lãm" class="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-150 ease-out" style="transform: translate(0px, 0px) scale(1);">
+
+        <!-- Next Button -->
+        <button id="btn-lb-next" onclick="event.stopPropagation(); navigateLightbox(1);" class="absolute right-3 sm:right-6 z-20 w-11 h-11 rounded-full bg-obsidian-900/85 hover:bg-champagne-500 text-white hover:text-obsidian-950 border border-champagne-500/30 flex items-center justify-center text-lg shadow-xl transition" title="Ảnh tiếp theo (→)">
+          ❯
+        </button>
+
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-obsidian-950/80 text-[11px] text-slate-400 pointer-events-none">
+          Lăn chuột để phóng to/thu nhỏ • Kéo chuột để di chuyển vùng xem chi tiết
+        </div>
+      </div>
+
+      <!-- Exhibition Plaque Sidebar -->
+      <aside id="lb-info-sidebar" class="w-full lg:w-96 bg-obsidian-900 border-t lg:border-t-0 lg:border-l border-champagne-500/20 p-5 sm:p-6 overflow-y-auto space-y-5 shrink-0 max-h-[45vh] lg:max-h-none">
+        <div>
+          <div class="flex items-center gap-2 text-xs text-champagne-400 font-medium">
+            <span id="lb-aspect-badge">16:9</span>
+            <span>•</span>
+            <span id="lb-date-badge">2026-10-20</span>
+          </div>
+          <h4 id="lb-sidebar-title" class="font-museum text-2xl font-bold text-white mt-1">Tên tác phẩm</h4>
+          <p id="lb-sidebar-description" class="text-slate-300 text-sm leading-relaxed mt-2">Mô tả tác phẩm</p>
+        </div>
+
+        <!-- Creative Prompt / Technical Metadata -->
+        <div class="p-3.5 rounded-xl bg-obsidian-950 border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">Thông Số & Ý Tưởng Sáng Tạo</span>
+            <button id="btn-lb-copy-prompt" onclick="copyLightboxPrompt()" class="text-[11px] text-emerald-400 hover:underline">Sao chép mô tả</button>
+          </div>
+          <p id="lb-sidebar-prompt" class="text-xs text-slate-400 font-mono leading-relaxed"></p>
+        </div>
+
+        <!-- Keywords / Tags -->
+        <div>
+          <div class="text-xs text-slate-400 mb-2">Từ khóa gắn kèm:</div>
+          <div id="lb-sidebar-tags" class="flex flex-wrap gap-1.5"></div>
+        </div>
+
+        <!-- Original Download Action (Respects Owner Permission!) -->
+        <div class="pt-3 border-t border-slate-800 space-y-2.5">
+          <button id="btn-lb-download-original" onclick="handleDownloadOriginalArtwork()" class="w-full py-3 px-4 rounded-xl gold-btn text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg">
+            <span>⬇ Tải Ảnh Gốc Chất Lượng Cao</span>
+          </button>
+          <p id="lb-download-permission-note" class="text-[11px] text-center text-slate-400"></p>
+        </div>
+
+        <!-- Social Share for Current Artwork -->
+        <div class="pt-3 border-t border-slate-800 space-y-2">
+          <div class="text-xs text-slate-400">Chia sẻ tác phẩm này:</div>
+          <div class="grid grid-cols-3 gap-2">
+            <button id="btn-lb-share-fb" onclick="shareCurrentArtwork('facebook')" class="py-2 rounded-lg bg-[#1877F2]/20 hover:bg-[#1877F2] text-blue-300 hover:text-white text-xs font-medium transition">Facebook</button>
+            <button id="btn-lb-share-zalo" onclick="shareCurrentArtwork('zalo')" class="py-2 rounded-lg bg-[#0068FF]/20 hover:bg-[#0068FF] text-sky-300 hover:text-white text-xs font-medium transition">Zalo</button>
+            <button id="btn-lb-share-link" onclick="shareCurrentArtwork('copy')" class="py-2 rounded-lg bg-obsidian-800 hover:bg-champagne-500 text-slate-200 hover:text-obsidian-950 text-xs font-medium transition">Copy Link</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- MODAL 2: PROTECTED ADMIN LOGIN & CURATOR MANAGEMENT STUDIO              -->
+  <!-- ======================================================================= -->
+  <div id="admin-modal" class="fixed inset-0 z-50 hidden bg-obsidian-950/90 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="w-full max-w-6xl rounded-2xl bg-obsidian-900 border border-champagne-500/35 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-obsidian-950 border-b border-champagne-500/20 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-champagne-500/20 border border-champagne-500/40 text-champagne-300 flex items-center justify-center font-bold">🔐</span>
+          <div>
+            <h3 class="font-museum text-xl sm:text-2xl font-bold text-white">Trung Tâm Quản Trị Triển Lãm – An Nhiên AI</h3>
+            <p class="text-xs text-slate-400">Quản lý tác phẩm, tải nhiều ảnh cùng lúc, phân quyền tải ảnh gốc & đồng bộ Đám mây</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btn-admin-logout" onclick="handleAdminLogout()" class="hidden px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300 hover:text-rose-400">Đăng xuất</button>
+          <button id="btn-close-admin-modal" onclick="closeAdminModal()" class="w-9 h-9 rounded-xl bg-obsidian-800 hover:bg-rose-500 text-slate-300 hover:text-white flex items-center justify-center font-bold">✕</button>
+        </div>
+      </div>
+
+      <!-- VIEW A: ADMIN LOGIN GATE -->
+      <div id="admin-login-view" class="p-6 sm:p-10 max-w-md mx-auto w-full space-y-6">
+        <div class="text-center space-y-2">
+          <div class="w-14 h-14 rounded-2xl bg-champagne-500/15 border border-champagne-500/40 text-champagne-400 flex items-center justify-center text-2xl mx-auto">🗝️</div>
+          <h4 class="font-museum text-3xl font-bold text-white">Đăng Nhập Chủ Sở Hữu</h4>
+          <p class="text-xs text-slate-400">Khu vực dành riêng cho Nhà sáng lập An Nhiên AI để thêm, sửa, xóa và sắp xếp hình ảnh mà không cần lập trình.</p>
+        </div>
+
+        <form id="admin-login-form" onsubmit="handleAdminLoginSubmit(event)" class="space-y-4">
+          <div>
+            <label for="admin-email-input" class="block text-xs text-slate-300 mb-1">Tài khoản Quản trị</label>
+            <input id="admin-email-input" type="text" value="admin@annhien.ai" required class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white">
+          </div>
+          <div>
+            <label for="admin-password-input" class="block text-xs text-slate-300 mb-1">Mật khẩu Bảo mật</label>
+            <input id="admin-password-input" type="password" value="AnNhien2026!" required placeholder="Nhập mật khẩu quản trị..." class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian-950 border border-slate-700 focus:border-champagne-400 focus:outline-none text-sm text-white">
+          </div>
+          <div class="p-3 rounded-xl bg-champagne-500/10 border border-champagne-500/25 text-[11px] text-champagne-300 leading-relaxed">
+            💡 <strong>Thông tin chạy thử nghiệm:</strong> Tài khoản <code class="text-white">admin@annhien.ai</code> / Mật khẩu mặc định: <code class="text-white">AnNhien2026!</code> (Đã điền sẵn để bạn trải nghiệm ngay; bạn có thể đổi mật khẩu riêng sau khi đăng nhập).
+          </div>
+          <button id="btn-login-submit" type="submit" class="w-full gold-btn py-3 rounded-xl text-sm shadow-lg">
+            Đăng Nhập Vào Phòng Quản Trị
+          </button>
+        </form>
+      </div>
+
+      <!-- VIEW B: AUTHENTICATED ADMIN DASHBOARD -->
+      <div id="admin-dashboard-view" class="hidden flex-grow flex flex-col overflow-hidden">
+        <!-- Admin Navigation Tabs -->
+        <div class="px-6 pt-3 bg-obsidian-950/60 border-b border-slate-800 flex flex-wrap gap-2 shrink-0">
+          <button id="admin-tab-artworks" onclick="switchAdminTab('artworks')" class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold border-b-2 border-champagne-400 text-champagne-300 bg-obsidian-900">
+            🖼️ Quản Lý & Sắp Xếp Tác Phẩm
+          </button>
+          <button id="admin-tab-upload" onclick="switchAdminTab('upload')" class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white">
+            ➕ Thêm Mới / Tải Nhiều Ảnh Cùng Lúc
+          </button>
+          <button id="admin-tab-cloud" onclick="switchAdminTab('cloud')" class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white">
+            ☁️ Lưu Trữ Đám Mây & GitHub Pages
+          </button>
+          <button id="admin-tab-orders" onclick="switchAdminTab('orders')" class="px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white">
+            📬 Đơn Đặt Ảnh & Học Viên (<span id="admin-orders-count">2</span>)
+          </button>
+        </div>
+
+        <!-- Tab Content Area -->
+        <div class="p-6 overflow-y-auto flex-grow space-y-6">
+
+          <!-- TAB 1: MANAGE, EDIT, DELETE & REORDER ARTWORKS -->
+          <div id="admin-panel-artworks" class="space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h4 class="font-museum text-2xl font-bold text-white">Danh Sách Tác Phẩm Trong Thư Viện</h4>
+                <p class="text-xs text-slate-400">Sử dụng các nút ↑ ↓ để sắp xếp thứ tự trưng bày, nhấn ★ để chọn làm Tác phẩm tiêu biểu, hoặc 🔓/🔒 để bật/tắt quyền tải ảnh gốc.</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button id="btn-admin-go-upload" onclick="switchAdminTab('upload')" class="gold-btn px-4 py-2 rounded-xl text-xs">+ Tải Thêm Ảnh Mới</button>
+                <button id="btn-admin-export-json" onclick="exportGalleryCatalogJSON()" class="px-3.5 py-2 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 text-xs font-medium">⬇ Xuất file gallery-catalog.json</button>
+                <button id="btn-admin-reset-demo" onclick="openResetConfirmModal()" class="px-3.5 py-2 rounded-xl border border-slate-700 text-slate-300 hover:text-white text-xs">↺ Khôi phục bộ ảnh mẫu</button>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto rounded-xl border border-slate-800">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-obsidian-950 text-slate-400 border-b border-slate-800 text-[11px] uppercase">
+                    <th class="py-3 px-3">Thứ tự</th>
+                    <th class="py-3 px-3">Ảnh thu nhỏ</th>
+                    <th class="py-3 px-3">Tên tác phẩm & Từ khóa</th>
+                    <th class="py-3 px-3">Chủ đề & Tỷ lệ</th>
+                    <th class="py-3 px-3">Tiêu biểu</th>
+                    <th class="py-3 px-3">Tải ảnh gốc</th>
+                    <th class="py-3 px-3 text-right">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-artworks-tbody" class="divide-y divide-slate-800/70">
+                  <!-- Populated dynamically by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 2: MULTI-FILE UPLOAD & METADATA EDITOR -->
+          <div id="admin-panel-upload" class="hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <!-- Dropzone & Batch Settings -->
+              <div class="lg:col-span-5 space-y-4">
+                <h4 class="font-museum text-2xl font-bold text-white">Tải Nhiều Ảnh Lên Cùng Lúc</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Hệ thống tự động nhận diện tỷ lệ khung hình (<code class="text-champagne-300">16:9</code>, <code class="text-champagne-300">9:16</code>, <code class="text-champagne-300">1:1</code>, <code class="text-champagne-300">3:4</code>), tạo ảnh thu nhỏ (Thumbnail) tăng tốc độ tải và đẩy lên Cloudinary CDN (nếu đã bật) hoặc lưu bền vững vào IndexedDB.
+                </p>
+
+                <!-- Drag & Drop Zone -->
+                <label for="multi-file-input" class="block p-8 rounded-2xl border-2 border-dashed border-champagne-500/40 hover:border-champagne-400 bg-obsidian-950/70 text-center cursor-pointer transition">
+                  <div class="text-4xl mb-2">📤</div>
+                  <div class="text-sm font-semibold text-white">Nhấn để chọn 1 hoặc nhiều ảnh từ máy tính/điện thoại</div>
+                  <div class="text-xs text-slate-400 mt-1">Hỗ trợ PNG, JPG, WEBP chất lượng cao</div>
+                  <input id="multi-file-input" type="file" multiple accept="image/*" onchange="handleMultiFileSelect(event)" class="hidden">
+                </label>
+
+                <!-- Or Add by External Image URL -->
+                <div class="p-4 rounded-xl bg-obsidian-950 border border-slate-800 space-y-2.5">
+                  <div class="text-xs font-semibold text-champagne-300">Hoặc thêm ảnh từ đường dẫn URL đám mây có sẵn:</div>
+                  <div class="flex gap-2">
+                    <input id="external-img-url-input" type="url" placeholder="https://res.cloudinary.com/..." class="flex-grow px-3 py-2 rounded-lg bg-obsidian-900 border border-slate-700 text-xs text-white focus:border-champagne-400 focus:outline-none">
+                    <button id="btn-add-url-queue" type="button" onclick="addExternalUrlToUploadQueue()" class="px-3.5 py-2 rounded-lg bg-champagne-500/20 text-champagne-300 hover:bg-champagne-500 hover:text-obsidian-950 text-xs font-semibold transition">+ Thêm</button>
+                  </div>
+                </div>
+
+                <!-- Default Batch Settings -->
+                <div class="p-4 rounded-xl bg-obsidian-950 border border-slate-800 space-y-3">
+                  <div class="text-xs font-semibold text-white">Thiết lập mặc định cho loạt ảnh vừa chọn:</div>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div>
+                      <label for="batch-default-category" class="block text-[11px] text-slate-400 mb-1">Danh mục chủ đề</label>
+                      <select id="batch-default-category" onchange="applyBatchCategoryToQueue(this.value)" class="w-full px-2.5 py-2 rounded-lg bg-obsidian-900 border border-slate-700 text-xs text-white">
+                        <option value="Chân dung nghệ thuật">Chân dung nghệ thuật</option>
+                        <option value="Phong cảnh">Phong cảnh</option>
+                        <option value="Hoa và thiên nhiên">Hoa và thiên nhiên</option>
+                        <option value="Tranh màu nước">Tranh màu nước</option>
+                        <option value="Ảnh thời trang">Ảnh thời trang</option>
+                        <option value="Poster">Poster</option>
+                        <option value="Ảnh phục chế">Ảnh phục chế</option>
+                        <option value="Ảnh MV ca nhạc">Ảnh MV ca nhạc</option>
+                        <option value="Bộ sưu tập khác">Bộ sưu tập khác</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="batch-default-date" class="block text-[11px] text-slate-400 mb-1">Ngày sáng tạo</label>
+                      <input id="batch-default-date" type="date" value="2026-10-25" onchange="applyBatchDateToQueue(this.value)" class="w-full px-2.5 py-2 rounded-lg bg-obsidian-900 border border-slate-700 text-xs text-white">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Upload Queue Preview & Individual Metadata Editor -->
+              <div class="lg:col-span-7 flex flex-col justify-between p-5 rounded-2xl bg-obsidian-950 border border-slate-800 min-h-[360px]">
+                <div>
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                    <h5 class="font-semibold text-sm text-white">Hàng Đợi Tác Phẩm Chuẩn Bị Lưu (<span id="upload-queue-count" class="text-champagne-400">0</span> ảnh)</h5>
+                    <button id="btn-clear-upload-queue" onclick="clearUploadQueue()" class="text-xs text-slate-400 hover:text-rose-400">Xóa hàng đợi</button>
+                  </div>
+
+                  <div id="upload-queue-list" class="space-y-4 mt-4 max-h-[380px] overflow-y-auto pr-1">
+                    <div class="text-center py-14 text-slate-500 text-xs">
+                      Chưa có ảnh nào trong hàng đợi. Hãy chọn 1 hoặc nhiều ảnh ở khung bên trái để chỉnh sửa thông tin và lưu vào thư viện.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex items-center justify-between gap-4 mt-4">
+                  <span id="upload-progress-status" class="text-xs text-slate-400">Sẵn sàng xử lý tạo ảnh thu nhỏ & lưu trữ bền vững.</span>
+                  <button id="btn-commit-upload-queue" onclick="commitUploadQueueToGallery()" class="gold-btn px-6 py-3 rounded-xl text-xs sm:text-sm shadow-lg">
+                    ✓ Lưu Tất Cả Vào Thư Viện Triển Lãm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: CLOUD STORAGE & GITHUB PAGES CONFIGURATION -->
+          <div id="admin-panel-cloud" class="hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Cloudinary Direct CDN Upload Config -->
+              <div class="p-5 rounded-2xl bg-obsidian-950 border border-champagne-500/25 space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-museum text-2xl font-bold text-white">1. Lưu Trữ Ảnh Đám Mây Cloudinary CDN</h4>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Khuyên dùng • Miễn phí 25GB</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Khi điền thông tin Cloudinary dưới đây, mọi bức ảnh bạn tải lên trong mục Quản trị sẽ được đẩy thẳng lên máy chủ đám mây Cloudinary, tự động tạo link ảnh thu nhỏ tối ưu tốc độ và giữ nguyên file ảnh gốc.
+                </p>
+                <div class="space-y-3">
+                  <div>
+                    <label for="cloud-cloudinary-name" class="block text-xs text-slate-300 mb-1">Cloudinary Cloud Name</label>
+                    <input id="cloud-cloudinary-name" type="text" placeholder="Ví dụ: an-nhien-ai-gallery" class="w-full px-3 py-2 rounded-xl bg-obsidian-900 border border-slate-700 text-xs text-white">
+                  </div>
+                  <div>
+                    <label for="cloud-cloudinary-preset" class="block text-xs text-slate-300 mb-1">Unsigned Upload Preset Name</label>
+                    <input id="cloud-cloudinary-preset" type="text" placeholder="Ví dụ: an_nhien_unsigned_preset" class="w-full px-3 py-2 rounded-xl bg-obsidian-900 border border-slate-700 text-xs text-white">
+                  </div>
+                </div>
+              </div>
+
+              <!-- GitHub API / Firebase / JSON Sync Config -->
+              <div class="p-5 rounded-2xl bg-obsidian-950 border border-champagne-500/25 space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-museum text-2xl font-bold text-white">2. Đồng Bộ Cơ Sở Dữ Liệu (GitHub / Firebase)</h4>
+                  <span class="px-2.5 py-1 rounded-full text-[11px] bg-champagne-500/15 text-champagne-300 border border-champagne-500/30">REST API Thực Tế</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Tự động đồng bộ danh mục tác phẩm lên kho lưu trữ GitHub Pages (<code class="text-champagne-300">data/gallery-catalog.json</code>) hoặc Firebase Realtime Database URL.
+                </p>
+                <div class="space-y-3">
+                  <div>
+                    <label for="cloud-github-repo" class="block text-xs text-slate-300 mb-1">GitHub Repository (owner/repo)</label>
+                    <input id="cloud-github-repo" type="text" placeholder="Ví dụ: annhienai/thu-vien-hinh-anh-ai" class="w-full px-3 py-2 rounded-xl bg-obsidian-900 border border-slate-700 text-xs text-white">
+                  </div>
+                  <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                      <label for="cloud-github-branch" class="block text-xs text-slate-300 mb-1">Nhánh (Branch) & Đường dẫn</label>
+                      <input id="cloud-github-branch" type="text" value="main:data/gallery-catalog.json" class="w-full px-3 py-2 rounded-xl bg-obsidian-900 border border-slate-700 text-xs text-white">
+                    </div>
+                    <div>
+                      <label for="cloud-github-token" class="block text-xs text-slate-300 mb-1">GitHub Personal Access Token</label>
+                      <input id="cloud-github-token" type="password" placeholder="ghp_..." class="w-full px-3 py-2 rounded-xl bg-obsidian-900 border border-slate-700 text-xs text-white">
+                    </div>
+                  </div>
+                  <div>
+                    <label for="cloud-firebase-url" class="block text-xs text-slate-300 mb-1">Hoặc URL Firebase Realtime DB / REST Endpoint</label>
+                    <input id="cloud-firebase-url" type="url" placeholder="https://an-nhien-ai-default-rtdb.asia-southeast1.firebasedatabase.app/gallery.json" class="w-full px-3 py-2 rounded-xl bg-obsidian-900 border border-slate-700 text-xs text-white">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Save Cloud Settings & Manual Import/Export -->
+            <div class="p-5 rounded-2xl bg-obsidian-950 border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex flex-wrap items-center gap-3">
+                <button id="btn-save-cloud-config" onclick="saveCloudConfiguration()" class="gold-btn px-5 py-2.5 rounded-xl text-xs font-semibold">
+                  💾 Lưu Cấu Hình Đám Mây
+                </button>
+                <button id="btn-sync-cloud-now" onclick="syncCatalogToCloudNow()" class="px-4 py-2.5 rounded-xl border border-champagne-500/40 bg-champagne-500/10 text-champagne-300 text-xs font-semibold hover:bg-champagne-500 hover:text-obsidian-950 transition">
+                  ☁️ Đồng Bộ Lên Đám Mây Ngay
+                </button>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2.5">
+                <button id="btn-export-json-cloud-tab" onclick="exportGalleryCatalogJSON()" class="px-4 py-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-xs font-semibold">
+                  ⬇ Tải xuống gallery-catalog.json
+                </button>
+                <label for="import-json-file-input" class="px-4 py-2.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 border border-slate-700 text-slate-200 text-xs font-semibold cursor-pointer">
+                  ⬆ Nhập từ file JSON
+                  <input id="import-json-file-input" type="file" accept=".json,application/json" onchange="importGalleryCatalogJSON(event)" class="hidden">
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: CLIENT COMMISSIONS & COURSE REGISTRATIONS -->
+          <div id="admin-panel-orders" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="font-museum text-2xl font-bold text-white">Danh Sách Yêu Cầu Đặt Ảnh, Liên Hệ & Đăng Ký Khóa Học</h4>
+                <p class="text-xs text-slate-400">Tất cả biểu mẫu khách hàng gửi từ trang chủ đều được lưu trữ tại đây.</p>
+              </div>
+            </div>
+            <div id="admin-orders-list" class="space-y-3">
+              <!-- Populated dynamically by JS -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- MODAL 3: EDIT SINGLE ARTWORK MODAL                                      -->
+  <!-- ======================================================================= -->
+  <div id="edit-artwork-modal" class="fixed inset-0 z-50 hidden bg-obsidian-950/90 backdrop-blur-xl flex items-center justify-center p-4">
+    <div class="w-full max-w-xl rounded-2xl bg-obsidian-900 border border-champagne-500/40 shadow-2xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 class="font-museum text-2xl font-bold text-white">Chỉnh Sửa Thông Tin Tác Phẩm</h3>
+        <button id="btn-close-edit-modal" onclick="closeEditArtworkModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
+      </div>
+      <form id="edit-artwork-form" onsubmit="saveEditedArtwork(event)" class="space-y-3.5 text-xs sm:text-sm">
+        <input id="edit-art-id" type="hidden">
+        <div>
+          <label for="edit-art-title" class="block text-xs text-slate-300 mb-1">Tên tác phẩm *</label>
+          <input id="edit-art-title" type="text" required class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label for="edit-art-category" class="block text-xs text-slate-300 mb-1">Danh mục chủ đề</label>
+            <select id="edit-art-category" class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs">
+              <option value="Chân dung nghệ thuật">Chân dung nghệ thuật</option>
+              <option value="Phong cảnh">Phong cảnh</option>
+              <option value="Hoa và thiên nhiên">Hoa và thiên nhiên</option>
+              <option value="Tranh màu nước">Tranh màu nước</option>
+              <option value="Ảnh thời trang">Ảnh thời trang</option>
+              <option value="Poster">Poster</option>
+              <option value="Ảnh phục chế">Ảnh phục chế</option>
+              <option value="Ảnh MV ca nhạc">Ảnh MV ca nhạc</option>
+              <option value="Bộ sưu tập khác">Bộ sưu tập khác</option>
+            </select>
+          </div>
+          <div>
+            <label for="edit-art-ratio" class="block text-xs text-slate-300 mb-1">Tỷ lệ khung hình</label>
+            <select id="edit-art-ratio" class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs">
+              <option value="16:9">Ngang 16:9</option>
+              <option value="9:16">Dọc 9:16</option>
+              <option value="1:1">Vuông 1:1</option>
+              <option value="3:4">Chân dung 3:4</option>
+            </select>
+          </div>
+          <div>
+            <label for="edit-art-date" class="block text-xs text-slate-300 mb-1">Ngày sáng tạo</label>
+            <input id="edit-art-date" type="date" class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs">
+          </div>
+        </div>
+        <div>
+          <label for="edit-art-desc" class="block text-xs text-slate-300 mb-1">Lời giới thiệu / Câu chuyện tác phẩm</label>
+          <textarea id="edit-art-desc" rows="3" class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs"></textarea>
+        </div>
+        <div>
+          <label for="edit-art-prompt" class="block text-xs text-slate-300 mb-1">Ghi chú kỹ thuật / AI Prompt</label>
+          <textarea id="edit-art-prompt" rows="2" class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs font-mono"></textarea>
+        </div>
+        <div>
+          <label for="edit-art-tags" class="block text-xs text-slate-300 mb-1">Từ khóa (cách nhau bằng dấu phẩy)</label>
+          <input id="edit-art-tags" type="text" class="w-full px-3 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs">
+        </div>
+        <div class="flex flex-wrap items-center gap-6 pt-2">
+          <label class="inline-flex items-center gap-2 text-xs text-slate-200 cursor-pointer">
+            <input id="edit-art-featured" type="checkbox" class="rounded accent-champagne-500">
+            <span>★ Đánh dấu là Tác phẩm tiêu biểu</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs text-slate-200 cursor-pointer">
+            <input id="edit-art-allow-dl" type="checkbox" class="rounded accent-champagne-500">
+            <span>🔓 Cho phép khách tải ảnh gốc</span>
+          </label>
+        </div>
+        <div class="flex justify-end gap-2.5 pt-4 border-t border-slate-800">
+          <button id="btn-cancel-edit-art" type="button" onclick="closeEditArtworkModal()" class="px-4 py-2 rounded-xl border border-slate-700 text-xs text-slate-300">Hủy</button>
+          <button id="btn-save-edit-art" type="submit" class="gold-btn px-5 py-2 rounded-xl text-xs font-semibold">Lưu Thay Đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- MODAL 4: COMMISSION / COURSE REGISTRATION MODAL                         -->
+  <!-- ======================================================================= -->
+  <div id="service-booking-modal" class="fixed inset-0 z-50 hidden bg-obsidian-950/90 backdrop-blur-xl flex items-center justify-center p-4">
+    <div class="w-full max-w-lg rounded-2xl bg-obsidian-900 border border-champagne-500/40 shadow-2xl p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">AN NHIÊN AI STUDIO & ACADEMY</span>
+          <h3 id="booking-modal-title" class="font-museum text-2xl font-bold text-white">Đặt Dịch Vụ / Đăng Ký Khóa Học</h3>
+        </div>
+        <button id="btn-close-booking-modal" onclick="closeBookingModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
+      </div>
+      <form id="service-booking-form" onsubmit="submitBookingForm(event)" class="space-y-3.5 text-xs sm:text-sm">
+        <div>
+          <label for="booking-service-name" class="block text-xs text-slate-400 mb-1">Nội dung đăng ký</label>
+          <input id="booking-service-name" type="text" readonly class="w-full px-3.5 py-2 rounded-xl bg-obsidian-950 border border-champagne-500/30 text-champagne-300 font-semibold text-xs">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="booking-client-name" class="block text-xs text-slate-300 mb-1">Họ và tên của bạn *</label>
+            <input id="booking-client-name" type="text" required placeholder="Nguyễn Văn A..." class="w-full px-3.5 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs">
+          </div>
+          <div>
+            <label for="booking-client-contact" class="block text-xs text-slate-300 mb-1">Số Zalo / Điện thoại / Email *</label>
+            <input id="booking-client-contact" type="text" required placeholder="09xx... hoặc email" class="w-full px-3.5 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs">
+          </div>
+        </div>
+        <div>
+          <label for="booking-client-notes" class="block text-xs text-slate-300 mb-1">Mô tả yêu cầu / Mong muốn của bạn *</label>
+          <textarea id="booking-client-notes" rows="3" required placeholder="Hãy chia sẻ ý tưởng bức ảnh bạn muốn tạo, số lượng ảnh, hoặc mục tiêu học tập..." class="w-full px-3.5 py-2 rounded-xl bg-obsidian-950 border border-slate-700 text-white text-xs"></textarea>
+        </div>
+        <div class="flex justify-end gap-2.5 pt-3 border-t border-slate-800">
+          <button id="btn-cancel-booking" type="button" onclick="closeBookingModal()" class="px-4 py-2 rounded-xl border border-slate-700 text-xs text-slate-300">Đóng</button>
+          <button id="btn-submit-booking" type="submit" class="gold-btn px-5 py-2.5 rounded-xl text-xs font-semibold">Gửi Đăng Ký Ngay</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- MODAL 5: CONFIRMATION DIALOG (REPLACES BROWSER CONFIRM)                 -->
+  <!-- ======================================================================= -->
+  <div id="confirm-dialog-modal" class="fixed inset-0 z-50 hidden bg-obsidian-950/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="w-full max-w-sm rounded-2xl bg-obsidian-900 border border-champagne-500/40 p-6 space-y-4 text-center shadow-2xl">
+      <div class="text-3xl">⚠️</div>
+      <h4 id="confirm-dialog-title" class="font-museum text-2xl font-bold text-white">Xác nhận thao tác</h4>
+      <p id="confirm-dialog-message" class="text-xs text-slate-300 leading-relaxed"></p>
+      <div class="flex justify-center gap-3 pt-2">
+        <button id="btn-confirm-cancel" onclick="closeConfirmDialog()" class="px-4 py-2 rounded-xl border border-slate-700 text-xs text-slate-300">Hủy bỏ</button>
+        <button id="btn-confirm-accept" onclick="executeConfirmedAction()" class="px-5 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold">Đồng ý thực hiện</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- ======================================================================= -->
+  <!-- APPLICATION JAVASCRIPT ENGINE                                           -->
+  <!-- ======================================================================= -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 1. ALL 9 EXHIBITION CATEGORIES DEFINITION
+    // -------------------------------------------------------------------------
+    const GALLERY_CATEGORIES = [
+      { id: 'all', name: 'Tất cả tác phẩm', icon: '✦', desc: 'Toàn bộ kho lưu trữ nghệ thuật số An Nhiên AI' },
+      { id: 'Chân dung nghệ thuật', name: 'Chân dung nghệ thuật', icon: '👑', desc: 'Thần thái Á Đông, ánh sáng Rembrandt & chiều sâu cảm xúc nội tâm' },
+      { id: 'Phong cảnh', name: 'Phong cảnh', icon: '🏞️', desc: 'Non nước Việt Nam kỳ vĩ trong sương sớm và hoàng hôn vàng kim' },
+      { id: 'Hoa và thiên nhiên', name: 'Hoa và thiên nhiên', icon: '🪷', desc: 'Thế giới thực vật, lan rừng và chim kỳ ảo dưới góc máy Macro' },
+      { id: 'Tranh màu nước', name: 'Tranh màu nước', icon: '🖌️', desc: 'Sự giao thoa tinh tế giữa thủy mặc truyền thống và màu nước đương đại' },
+      { id: 'Ảnh thời trang', name: 'Ảnh thời trang', icon: '👗', desc: 'Haute Couture & cảm hứng cổ phục cung đình Việt Nam đương đại' },
+      { id: 'Poster', name: 'Poster', icon: '🎬', desc: 'Thiết kế Poster điện ảnh, bìa sách và ấn phẩm nghệ thuật thị giác' },
+      { id: 'Ảnh phục chế', name: 'Ảnh phục chế', icon: '🕰️', desc: 'Khôi phục ký ức vượt thời gian với độ chi tiết 8K chân thực' },
+      { id: 'Ảnh MV ca nhạc', name: 'Ảnh MV ca nhạc', icon: '🎵', desc: 'Khung hình điện ảnh đồng hành cùng giai điệu An Nhiên AI Music' },
+      { id: 'Bộ sưu tập khác', name: 'Bộ sưu tập khác', icon: '✨', desc: 'Những thử nghiệm thị giác siêu thực và ý niệm nghệ thuật mới' }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 2. INITIAL CURATED ARTWORKS DATASET (REPLACEABLE & PERSISTENT)
+    // -------------------------------------------------------------------------
+    const ART_ASSETS = {
+      landscape: 'assets/images/opt_landscape_16_9.jpg',
+      portrait: 'assets/images/opt_portrait_9_16.jpg',
+      watercolor: 'assets/images/opt_watercolor_1_1.jpg',
+      fashion: 'assets/images/opt_fashion_3_4.jpg',
+      poster: 'assets/images/opt_poster_9_16.jpg',
+      restore: 'assets/images/opt_restore_3_4.jpg',
+      mv: 'assets/images/opt_mv_16_9.jpg',
+      nature: 'assets/images/opt_nature_1_1.jpg',
+      collection: 'assets/images/opt_collection_1_1.jpg'
+    };
+
+    const INITIAL_ARTWORKS = [
+      {
+        id: 'art-01',
+        title: 'Bình Minh Liên Đầm Tràng An',
+        category: 'Phong cảnh',
+        aspectRatio: '16:9',
+        createdAt: '2026-10-24',
+        featured: true,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.landscape,
+        thumbUrl: ART_ASSETS.landscape,
+        description: 'Khoảnh khắc bình minh vàng kim rót mật xuống đầm sen hồng đang độ mãn khai, phía xa là trùng điệp núi đá vôi ẩn hiện trong làn sương mai thanh khiết.',
+        prompt: 'Ethereal Vietnamese misty mountain landscape at golden sunrise with lotus pond in foreground, cinematic fine art photography, warm champagne gold and emerald tones, 8k resolution',
+        tags: ['phongcanh', 'hoasen', 'trangan', 'binhminh', 'annhienai']
+      },
+      {
+        id: 'art-02',
+        title: 'Dáng Ngọc Đêm Phố Cổ',
+        category: 'Chân dung nghệ thuật',
+        aspectRatio: '9:16',
+        createdAt: '2026-10-23',
+        featured: true,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.portrait,
+        thumbUrl: ART_ASSETS.portrait,
+        description: 'Vẻ đẹp dịu dàng mà kiêu sa của người phụ nữ Việt trong tà áo dài nhung gấm xanh ngọc lục bảo, nổi bật giữa không gian đèn lồng lụa vàng ấm áp.',
+        prompt: 'Fine art editorial portrait of an elegant Vietnamese woman in emerald silk Ao Dai amidst glowing golden lanterns and soft mist, dramatic Rembrandt lighting, 9:16 vertical',
+        tags: ['chandung', 'aodai', 'phoco', 'denlong', 'nghethuat']
+      },
+      {
+        id: 'art-03',
+        title: 'Bạch Liên Vũ Điệu Thủy Mặc',
+        category: 'Tranh màu nước',
+        aspectRatio: '1:1',
+        createdAt: '2026-10-22',
+        featured: true,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.watercolor,
+        thumbUrl: ART_ASSETS.watercolor,
+        description: 'Tác phẩm màu nước kết hợp nét cọ mảnh tinh tế khắc họa đóa sen trắng phớt hồng đón nắng mai trên nền giấy mỹ thuật cổ điển.',
+        prompt: 'Delicate botanical watercolor and ink painting of blooming white and blush pink lotus flowers with morning dew drops and golden light rays, fine art museum print',
+        tags: ['maunuoc', 'bachlien', 'hoasen', 'thuymac', 'binhyen']
+      },
+      {
+        id: 'art-04',
+        title: 'Hoàng Bào Vũ Khúc Đương Đại',
+        category: 'Ảnh thời trang',
+        aspectRatio: '3:4',
+        createdAt: '2026-10-21',
+        featured: true,
+        allowDownload: false,
+        imageUrl: ART_ASSETS.fashion,
+        thumbUrl: ART_ASSETS.fashion,
+        description: 'Thiết kế Haute Couture lấy cảm hứng từ mỹ thuật cung đình Huế với tà lụa organza chuyển sắc và họa tiết thêu kim tuyến phượng hoàng.',
+        prompt: 'Avant-garde haute couture fashion editorial photography inspired by Vietnamese royal heritage, flowing translucent silk and gold embroidery in minimalist museum space',
+        tags: ['thoitrang', 'cophuc', 'hautecouture', 'phuonghoang', 'editorial']
+      },
+      {
+        id: 'art-05',
+        title: 'Phượng Hoàng Lửa Trên Mái Cổ',
+        category: 'Poster',
+        aspectRatio: '9:16',
+        createdAt: '2026-10-20',
+        featured: true,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.poster,
+        thumbUrl: ART_ASSETS.poster,
+        description: 'Poster nghệ thuật kỳ ảo tái hiện hình tượng Phượng Hoàng ánh kim vươn mình bay lên từ quần thể mái đền cổ kính dưới bầu trời đêm đầy sao.',
+        prompt: 'Cinematic fine art poster design of a mystical golden phoenix rising above ancient Vietnamese temple rooftops under a starry indigo night sky, glowing embers',
+        tags: ['poster', 'phuonghoang', 'dienanh', 'kyao', 'mythuat']
+      },
+      {
+        id: 'art-06',
+        title: 'Gia Phong Đông Dương 1932 (Phục Chế 8K)',
+        category: 'Ảnh phục chế',
+        aspectRatio: '3:4',
+        createdAt: '2026-10-19',
+        featured: false,
+        allowDownload: false,
+        imageUrl: ART_ASSETS.restore,
+        thumbUrl: ART_ASSETS.restore,
+        description: 'Tác phẩm phục chế và lên màu chuẩn lịch sử từ bức ảnh gia đình quý tộc Hà Nội thập niên 1930, tái hiện trọn vẹn chất liệu gấm vóc và kiến trúc Pháp cổ.',
+        prompt: 'Colorized and restored 1930s Indochine heritage portrait of a noble Vietnamese family in traditional silk attire beside a vintage French colonial veranda in Hanoi',
+        tags: ['phucche', 'dongduong', 'lichsu', 'di-san', 'hanoi1930']
+      },
+      {
+        id: 'art-07',
+        title: 'Khúc Dạ Nguyệt Bên Sông Ngân',
+        category: 'Ảnh MV ca nhạc',
+        aspectRatio: '16:9',
+        createdAt: '2026-10-18',
+        featured: true,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.mv,
+        thumbUrl: ART_ASSETS.mv,
+        description: 'Khung hình chủ đạo (Keyframe) cho MV Acoustic trữ tình của An Nhiên AI Music: con thuyền gỗ trôi giữa dòng sông phát sáng và hàng trăm hoa đăng ấm áp.',
+        prompt: 'Dreamy cinematic music video scene of an acoustic guitarist and singer on a wooden boat drifting through a bioluminescent river surrounded by floating paper lanterns',
+        tags: ['mvcanhac', 'sunoai', 'annhienmusic', 'hoadang', 'acoustic']
+      },
+      {
+        id: 'art-08',
+        title: 'Hút Mật Ngọc Lục Bảo & Phong Lan Rừng',
+        category: 'Hoa và thiên nhiên',
+        aspectRatio: '1:1',
+        createdAt: '2026-10-17',
+        featured: false,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.nature,
+        thumbUrl: ART_ASSETS.nature,
+        description: 'Nhiếp ảnh Macro hiện thực huyền ảo: chim hút mật lông xanh ánh kim đậu bên nhành lan rừng đẫm giọt sương mai lấp lánh như pha lê.',
+        prompt: 'Macro magical realism photography of an iridescent emerald sunbird perched on a blooming wild forest orchid branch with glowing morning dew and golden bokeh',
+        tags: ['hoavathiennhien', 'lanrung', 'chimkyao', 'macro', 'magicalrealism']
+      },
+      {
+        id: 'art-09',
+        title: 'Tĩnh Tâm Liên Hoa Vũ Trụ',
+        category: 'Bộ sưu tập khác',
+        aspectRatio: '1:1',
+        createdAt: '2026-10-15',
+        featured: false,
+        allowDownload: true,
+        imageUrl: ART_ASSETS.collection,
+        thumbUrl: ART_ASSETS.collection,
+        description: 'Tác phẩm thuộc bộ sưu tập Thiền & Năng lượng An Nhiên: sự tĩnh lặng của mặt hồ sen phản chiếu ánh sáng vàng kim chữa lành tâm thức.',
+        prompt: 'Sacred golden lotus pond meditation art, warm ethereal reflection, healing spiritual atmosphere, square composition',
+        tags: ['bosuutap', 'thien', 'binhyen', 'nangluong', 'annhien']
+      }
+    ];
+
+    const INITIAL_ORDERS = [
+      {
+        id: 'ord-01',
+        type: 'Đặt dịch vụ thiết kế',
+        service: 'Ảnh Bìa & Visual MV Ca Nhạc',
+        clientName: 'Ca sĩ Minh Ngọc',
+        contact: '0912.888.xxx (Zalo)',
+        notes: 'Mình muốn đặt trọn bộ 10 ảnh 16:9 và 2 ảnh bìa 9:16 cho MV ballad mùa thu Hà Nội.',
+        createdAt: '2026-10-24 16:30',
+        status: 'Đang tư vấn'
+      },
+      {
+        id: 'ord-02',
+        type: 'Đăng ký Khóa học AI',
+        service: 'Nghệ Thuật Nhiếp Ảnh & Chân Dung AI Cao Cấp',
+        clientName: 'Trần Hoàng Nam',
+        contact: 'hoangnam.design@gmail.com',
+        notes: 'Đăng ký khóa học tháng 11, mong nhận đề cương chi tiết và hướng dẫn chuẩn bị tài khoản.',
+        createdAt: '2026-10-25 09:15',
+        status: 'Mới nhận'
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 3. APPLICATION STATE & PERSISTENT INDEXEDDB + CLOUD ENGINE
+    // -------------------------------------------------------------------------
+    let artworksState = [];
+    let ordersState = [];
+    let currentCategoryFilter = 'all';
+    let currentRatioFilter = 'all';
+    let currentSearchQuery = '';
+    let currentSortMode = 'custom';
+    let currentViewMode = 'masonry'; // 'masonry' | 'museum' | 'list'
+
+    // Lightbox State
+    let filteredArtworksCache = [];
+    let currentLightboxIndex = 0;
+    let lightboxZoom = 1;
+    let lightboxPanX = 0;
+    let lightboxPanY = 0;
+    let isPanningLightbox = false;
+    let panStartX = 0;
+    let panStartY = 0;
+
+    // Admin State
+    let isAdminAuthenticated = false;
+    let uploadQueue = [];
+    let pendingConfirmCallback = null;
+
+    // Cloud Config State
+    let cloudConfig = {
+      cloudinaryName: '',
+      cloudinaryPreset: '',
+      githubRepo: '',
+      githubBranchPath: 'main:data/gallery-catalog.json',
+      githubToken: '',
+      firebaseUrl: ''
+    };
+
+    // IndexedDB Persistent Database Engine (Replaces fragile 5MB localStorage)
+    const IDB_NAME = 'AnNhienAI_ArtMuseum_DB';
+    const IDB_VERSION = 1;
+    let idbInstance = null;
+
+    function openPersistentDatabase() {
+      return new Promise((resolve) => {
+        if (!window.indexedDB) {
+          resolve(null);
+          return;
+        }
+        try {
+          const request = window.indexedDB.open(IDB_NAME, IDB_VERSION);
+          request.onupgradeneeded = function(event) {
+            const db = event.target.result;
+            if (!db.objectStoreNames.contains('catalog')) {
+              db.createObjectStore('catalog', { keyPath: 'key' });
+            }
+          };
+          request.onsuccess = function(event) {
+            idbInstance = event.target.result;
+            resolve(idbInstance);
+          };
+          request.onerror = function() {
+            resolve(null);
+          };
+        } catch (err) {
+          resolve(null);
+        }
+      });
+    }
+
+    async function saveToPersistentDB(key, value) {
+      if (!idbInstance) {
+        await openPersistentDatabase();
+      }
+      if (idbInstance) {
+        return new Promise((resolve) => {
+          try {
+            const tx = idbInstance.transaction(['catalog'], 'readwrite');
+            const store = tx.objectStore('catalog');
+            store.put({ key: key, value: value, updatedAt: new Date().toISOString() });
+            tx.oncomplete = () => resolve(true);
+            tx.onerror = () => resolve(false);
+          } catch (e) {
+            resolve(false);
+          }
+        });
+      }
+      return false;
+    }
+
+    async function loadFromPersistentDB(key) {
+      if (!idbInstance) {
+        await openPersistentDatabase();
+      }
+      if (idbInstance) {
+        return new Promise((resolve) => {
+          try {
+            const tx = idbInstance.transaction(['catalog'], 'readonly');
+            const store = tx.objectStore('catalog');
+            const req = store.get(key);
+            req.onsuccess = () => resolve(req.result ? req.result.value : null);
+            req.onerror = () => resolve(null);
+          } catch (e) {
+            resolve(null);
+          }
+        });
+      }
+      return null;
+    }
+
+    // Initialize Application Data
+    async function initGalleryApp() {
+      document.querySelectorAll('img[data-asset]').forEach(img => {
+        const key = img.getAttribute('data-asset');
+        if (ART_ASSETS[key]) img.src = ART_ASSETS[key];
+      });
+      await openPersistentDatabase();
+
+      // Load Cloud Config
+      const savedCloud = await loadFromPersistentDB('cloudConfig');
+      if (savedCloud) {
+        cloudConfig = Object.assign(cloudConfig, savedCloud);
+        populateCloudConfigInputs();
+      }
+
+      // Load Orders
+      const savedOrders = await loadFromPersistentDB('orders');
+      if (savedOrders && Array.isArray(savedOrders) && savedOrders.length > 0) {
+        ordersState = savedOrders;
+      } else {
+        ordersState = JSON.parse(JSON.stringify(INITIAL_ORDERS));
+        await saveToPersistentDB('orders', ordersState);
+      }
+
+      // 1. Try loading from configured Firebase/REST Cloud URL if set
+      let loadedFromCloud = false;
+      if (cloudConfig.firebaseUrl && cloudConfig.firebaseUrl.startsWith('https://')) {
+        try {
+          const resp = await fetch(cloudConfig.firebaseUrl);
+          if (resp.ok) {
+            const cloudData = await resp.json();
+            if (cloudData && Array.isArray(cloudData.artworks) && cloudData.artworks.length > 0) {
+              artworksState = cloudData.artworks;
+              loadedFromCloud = true;
+              updateCloudStatusBanner('Đã đồng bộ trực tiếp từ Cloud Database');
+            }
+          }
+        } catch (err) {
+          // Fallback to IndexedDB
+        }
+      }
+
+      // 2. Load from Persistent IndexedDB if not loaded from remote cloud
+      if (!loadedFromCloud) {
+        const savedArtworks = await loadFromPersistentDB('artworks');
+        if (savedArtworks && Array.isArray(savedArtworks) && savedArtworks.length > 0) {
+          artworksState = savedArtworks;
+        } else {
+          artworksState = JSON.parse(JSON.stringify(INITIAL_ARTWORKS));
+          await saveToPersistentDB('artworks', artworksState);
+        }
+      }
+
+      updateCloudStatusIndicator();
+      renderAllGalleryComponents();
+      setupKeyboardShortcuts();
+    }
+
+    function updateCloudStatusIndicator() {
+      const statusEl = document.getElementById('cloud-status-text');
+      if (!statusEl) return;
+      const parts = ['IndexedDB Bền Vững'];
+      if (cloudConfig.cloudinaryName && cloudConfig.cloudinaryPreset) {
+        parts.push('Cloudinary CDN (' + cloudConfig.cloudinaryName + ')');
+      }
+      if (cloudConfig.githubRepo || cloudConfig.firebaseUrl) {
+        parts.push('Cloud Sync Active');
+      }
+      statusEl.textContent = 'Lưu trữ: ' + parts.join(' + ');
+    }
+
+    function updateCloudStatusBanner(msg) {
+      const statusEl = document.getElementById('cloud-status-text');
+      if (statusEl) statusEl.textContent = msg;
+    }
+
+    // -------------------------------------------------------------------------
+    // 4. RENDERING FUNCTIONS (HERO, FILTERS, MASONRY/MUSEUM GRID, COLLECTIONS)
+    // -------------------------------------------------------------------------
+    function renderAllGalleryComponents() {
+      renderHeroSpotlight();
+      renderCategoryPills();
+      renderGalleryGrid();
+      renderCollectionsShowcase();
+      renderAdminArtworksTable();
+      renderAdminOrdersList();
+      updateDynamicSEOSchema();
+    }
+
+    function renderHeroSpotlight() {
+      const totalEl = document.getElementById('stat-total-artworks');
+      const featEl = document.getElementById('stat-featured-count');
+      if (totalEl) totalEl.textContent = String(artworksState.length);
+      const featuredList = artworksState.filter(a => a.featured);
+      if (featEl) featEl.textContent = String(featuredList.length);
+
+      const strip = document.getElementById('hero-featured-strip');
+      if (!strip) return;
+      const spotlightItems = (featuredList.length > 0 ? featuredList : artworksState).slice(0, 5);
+
+      strip.innerHTML = spotlightItems.map(item => `
+        <button type="button" onclick="selectHeroArtwork('${item.id}')" class="group relative rounded-lg overflow-hidden aspect-video border border-champagne-500/30 hover:border-champagne-400 focus:outline-none transition">
+          <img src="${item.thumbUrl || item.imageUrl}" alt="${escapeHtml(item.title)}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-obsidian-950/30 group-hover:bg-transparent transition"></div>
+        </button>
+      `).join('');
+    }
+
+    function selectHeroArtwork(artId) {
+      const art = artworksState.find(a => a.id === artId);
+      if (!art) return;
+      const imgEl = document.getElementById('hero-cover-img');
+      const titleEl = document.getElementById('hero-cover-title');
+      const descEl = document.getElementById('hero-cover-desc');
+      if (imgEl) {
+        imgEl.src = art.imageUrl;
+        imgEl.parentElement.setAttribute('onclick', `openLightboxById('${art.id}')`);
+      }
+      if (titleEl) titleEl.textContent = art.title;
+      if (descEl) descEl.textContent = art.description;
+    }
+
+    function renderCategoryPills() {
+      const container = document.getElementById('category-pills-container');
+      if (!container) return;
+
+      container.innerHTML = GALLERY_CATEGORIES.map(cat => {
+        const count = cat.id === 'all'
+          ? artworksState.length
+          : artworksState.filter(a => a.category === cat.id).length;
+        const isActive = currentCategoryFilter === cat.id;
+        const activeClasses = isActive
+          ? 'bg-champagne-500 text-obsidian-950 font-semibold border-champagne-400 shadow-md'
+          : 'bg-obsidian-950 text-slate-300 border-slate-800 hover:border-champagne-500/40 hover:text-white';
+        return `
+          <button type="button" onclick="setCategoryFilter('${cat.id}')" class="px-3.5 py-2 rounded-xl border text-xs transition shrink-0 flex items-center gap-1.5 ${activeClasses}">
+            <span>${cat.icon}</span>
+            <span>${cat.name}</span>
+            <span class="px-1.5 py-0.2 rounded-full text-[10px] ${isActive ? 'bg-obsidian-950/20 text-obsidian-950' : 'bg-obsidian-800 text-champagne-400'}">${count}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function getFilteredAndSortedArtworks() {
+      const query = currentSearchQuery.trim().toLowerCase();
+      let list = artworksState.filter(item => {
+        const matchCat = currentCategoryFilter === 'all' || item.category === currentCategoryFilter;
+        const matchRatio = currentRatioFilter === 'all' || item.aspectRatio === currentRatioFilter;
+        if (!matchCat || !matchRatio) return false;
+        if (!query) return true;
+        const haystack = [
+          item.title,
+          item.description,
+          item.category,
+          item.prompt || '',
+          ...(item.tags || [])
+        ].join(' ').toLowerCase();
+        return haystack.includes(query);
+      });
+
+      if (currentSortMode === 'newest') {
+        list.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+      } else if (currentSortMode === 'oldest') {
+        list.sort((a, b) => (a.createdAt || '').localeCompare(b.createdAt || ''));
+      } else if (currentSortMode === 'featured') {
+        list.sort((a, b) => Number(b.featured) - Number(a.featured));
+      } else if (currentSortMode === 'title-asc') {
+        list.sort((a, b) => a.title.localeCompare(b.title, 'vi'));
+      }
+      return list;
+    }
+
+    function getAspectRatioClass(ratio) {
+      if (ratio === '16:9') return 'ratio-16-9';
+      if (ratio === '9:16') return 'ratio-9-16';
+      if (ratio === '1:1') return 'ratio-1-1';
+      return 'ratio-3-4';
+    }
+
+    function renderGalleryGrid() {
+      const grid = document.getElementById('gallery-grid-container');
+      const emptyState = document.getElementById('gallery-empty-state');
+      const countLabel = document.getElementById('showing-count-label');
+      const summaryLabel = document.getElementById('active-filter-summary');
+      if (!grid) return;
+
+      filteredArtworksCache = getFilteredAndSortedArtworks();
+      if (countLabel) countLabel.textContent = String(filteredArtworksCache.length);
+
+      const summaryParts = [];
+      if (currentCategoryFilter !== 'all') summaryParts.push(`chủ đề "${currentCategoryFilter}"`);
+      if (currentRatioFilter !== 'all') summaryParts.push(`tỷ lệ ${currentRatioFilter}`);
+      if (currentSearchQuery.trim()) summaryParts.push(`từ khóa "${currentSearchQuery.trim()}"`);
+      if (summaryLabel) {
+        summaryLabel.textContent = summaryParts.length > 0
+          ? 'lọc theo ' + summaryParts.join(', ')
+          : 'trong tất cả chủ đề triển lãm';
+      }
+
+      if (filteredArtworksCache.length === 0) {
+        grid.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+      if (emptyState) emptyState.classList.add('hidden');
+
+      // Configure container layout class based on view mode
+      if (currentViewMode === 'masonry') {
+        grid.className = 'exhibition-masonry';
+      } else if (currentViewMode === 'museum') {
+        grid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start';
+      } else {
+        grid.className = 'space-y-4';
+      }
+
+      grid.innerHTML = filteredArtworksCache.map((art) => {
+        const ratioClass = getAspectRatioClass(art.aspectRatio);
+        const tagsHtml = (art.tags || []).slice(0, 3).map(t =>
+          `<span onclick="event.stopPropagation(); filterByTag('${escapeHtml(t)}')" class="px-2 py-0.5 rounded-md bg-obsidian-950/80 border border-slate-800 text-[11px] text-slate-300 hover:text-champagne-300 cursor-pointer">#${escapeHtml(t)}</span>`
+        ).join('');
+
+        if (currentViewMode === 'list') {
+          return `
+            <article onclick="openLightboxById('${art.id}')" class="art-card rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-5 cursor-pointer">
+              <div class="w-full sm:w-48 h-32 rounded-xl overflow-hidden shrink-0 relative">
+                <img src="${art.thumbUrl || art.imageUrl}" alt="${escapeHtml(art.title)}" loading="lazy" class="art-img w-full h-full object-cover">
+                <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-obsidian-950/80 text-[10px] text-champagne-300">${art.aspectRatio}</span>
+              </div>
+              <div class="flex-grow space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2 text-xs text-champagne-400">
+                  <span>${escapeHtml(art.category)}</span>
+                  <span>•</span>
+                  <span>${escapeHtml(art.createdAt)}</span>
+                  ${art.featured ? '<span class="px-2 py-0.5 rounded-full bg-champagne-500/20 text-champagne-300 text-[10px]">★ Tiêu biểu</span>' : ''}
+                </div>
+                <h3 class="font-museum text-2xl font-bold text-white">${escapeHtml(art.title)}</h3>
+                <p class="text-xs text-slate-300 line-clamp-2">${escapeHtml(art.description)}</p>
+                <div class="flex flex-wrap gap-1.5 pt-1">${tagsHtml}</div>
+              </div>
+              <div class="shrink-0 flex sm:flex-col gap-2">
+                <button type="button" onclick="event.stopPropagation(); openLightboxById('${art.id}')" class="px-3.5 py-2 rounded-xl bg-champagne-500/15 text-champagne-300 text-xs font-medium hover:bg-champagne-500 hover:text-obsidian-950 transition">Xem toàn màn hình</button>
+              </div>
+            </article>
+          `;
+        }
+
+        const isMuseumFrame = currentViewMode === 'museum';
+        return `
+          <article onclick="openLightboxById('${art.id}')" class="${currentViewMode === 'masonry' ? 'exhibition-masonry-item' : ''} art-card rounded-2xl overflow-hidden cursor-pointer group">
+            <div class="${isMuseumFrame ? 'p-4 sm:p-5 bg-obsidian-950' : ''}">
+              <div class="relative overflow-hidden ${ratioClass} ${isMuseumFrame ? 'museum-mat-frame rounded-sm' : ''}">
+                <img src="${art.thumbUrl || art.imageUrl}" alt="${escapeHtml(art.title)}" loading="lazy" decoding="async" class="art-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950/90 via-transparent to-obsidian-950/20 opacity-85 group-hover:opacity-95 transition"></div>
+
+                <!-- Top Badges -->
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-obsidian-950/80 backdrop-blur-md text-champagne-300 border border-champagne-500/30">
+                    ${escapeHtml(art.category)}
+                  </span>
+                  <div class="flex items-center gap-1.5">
+                    ${art.featured ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-champagne-500 text-obsidian-950">★ Tiêu biểu</span>' : ''}
+                    <span class="px-2 py-0.5 rounded-full text-[10px] bg-obsidian-950/80 text-slate-200 border border-slate-700">${art.aspectRatio}</span>
+                  </div>
+                </div>
+
+                <!-- Quick Hover Zoom Overlay -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                  <span class="px-4 py-2 rounded-full bg-obsidian-950/85 border border-champagne-400 text-champagne-300 text-xs font-medium shadow-xl">
+                    🔍 Xem Triển Lãm Toàn Màn Hình
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Exhibition Plaque Footer -->
+            <div class="p-4 sm:p-5 space-y-2.5">
+              <div class="flex items-center justify-between text-[11px] text-slate-400">
+                <span>📅 ${escapeHtml(art.createdAt)}</span>
+                <span>${art.allowDownload ? '🔓 Cho phép tải ảnh gốc' : '🔒 Bản quyền bảo vệ'}</span>
+              </div>
+              <h3 class="font-museum text-xl sm:text-2xl font-bold text-white group-hover:text-champagne-300 transition leading-snug">
+                ${escapeHtml(art.title)}
+              </h3>
+              <p class="text-xs text-slate-300 line-clamp-2 leading-relaxed">
+                ${escapeHtml(art.description)}
+              </p>
+              <div class="pt-2 flex items-center justify-between gap-2 border-t border-slate-800/80">
+                <div class="flex flex-wrap gap-1">${tagsHtml}</div>
+                <button type="button" onclick="event.stopPropagation(); shareSpecificArtworkById('${art.id}')" class="text-xs text-champagne-400 hover:underline shrink-0" title="Chia sẻ tác phẩm">Chia sẻ ↗</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderCollectionsShowcase() {
+      const container = document.getElementById('collections-showcase-grid');
+      if (!container) return;
+
+      const thematicCats = GALLERY_CATEGORIES.filter(c => c.id !== 'all');
+      container.innerHTML = thematicCats.map(cat => {
+        const items = artworksState.filter(a => a.category === cat.id);
+        const coverImg = items.length > 0
+          ? (items[0].thumbUrl || items[0].imageUrl)
+          : ART_ASSETS.landscape;
+
+        return `
+          <div onclick="selectCollectionAndScroll('${cat.id}')" class="group rounded-2xl overflow-hidden bg-obsidian-950 border border-champagne-500/20 hover:border-champagne-400 cursor-pointer transition shadow-lg flex flex-col justify-between">
+            <div class="h-44 relative overflow-hidden">
+              <img src="${coverImg}" alt="${escapeHtml(cat.name)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/35 to-transparent"></div>
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-obsidian-950/85 border border-champagne-500/30 text-champagne-300 text-xs font-medium">
+                ${cat.icon} ${items.length} tác phẩm
+              </span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-museum text-2xl font-bold text-white group-hover:text-champagne-300 transition">${escapeHtml(cat.name)}</h3>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">${escapeHtml(cat.desc)}</p>
+              <div class="mt-3 text-xs text-champagne-400 font-semibold flex items-center gap-1">
+                <span>Bước vào phòng trưng bày</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // -------------------------------------------------------------------------
+    // 5. FILTER, SEARCH, SORT & VIEW CONTROLS
+    // -------------------------------------------------------------------------
+    function setCategoryFilter(categoryId) {
+      currentCategoryFilter = categoryId;
+      renderCategoryPills();
+      renderGalleryGrid();
+    }
+
+    function setAspectRatioFilter(ratio) {
+      currentRatioFilter = ratio;
+      const ratioMap = {
+        'all': 'ratio-btn-all',
+        '16:9': 'ratio-btn-16-9',
+        '9:16': 'ratio-btn-9-16',
+        '1:1': 'ratio-btn-1-1',
+        '3:4': 'ratio-btn-3-4'
+      };
+      Object.entries(ratioMap).forEach(([key, btnId]) => {
+        const btn = document.getElementById(btnId);
+        if (!btn) return;
+        if (key === ratio) {
+          btn.className = 'ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-champagne-500 text-obsidian-950 font-semibold shrink-0';
+        } else {
+          btn.className = 'ratio-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-950 text-slate-300 border border-slate-800 hover:border-champagne-500/30 shrink-0';
+        }
+      });
+      renderGalleryGrid();
+    }
+
+    function handleGallerySearch(val) {
+      currentSearchQuery = val || '';
+      const clearBtn = document.getElementById('btn-clear-search');
+      if (clearBtn) {
+        if (currentSearchQuery.length > 0) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+      }
+      renderGalleryGrid();
+    }
+
+    function filterByTag(tag) {
+      const input = document.getElementById('gallery-search-input');
+      if (input) input.value = tag;
+      handleGallerySearch(tag);
+      navigateSection('trien-lam');
+      showToast(`Đang lọc theo từ khóa #${tag}`, 'info');
+    }
+
+    function handleGallerySort(mode) {
+      currentSortMode = mode;
+      renderGalleryGrid();
+    }
+
+    function clearGalleryFilters() {
+      currentCategoryFilter = 'all';
+      currentRatioFilter = 'all';
+      currentSearchQuery = '';
+      currentSortMode = 'custom';
+      const searchInput = document.getElementById('gallery-search-input');
+      if (searchInput) searchInput.value = '';
+      const clearBtn = document.getElementById('btn-clear-search');
+      if (clearBtn) clearBtn.classList.add('hidden');
+      const sortSelect = document.getElementById('gallery-sort-select');
+      if (sortSelect) sortSelect.value = 'custom';
+      setAspectRatioFilter('all');
+      renderCategoryPills();
+      renderGalleryGrid();
+    }
+
+    function setGalleryViewMode(mode) {
+      currentViewMode = mode;
+      const modes = ['masonry', 'museum', 'list'];
+      modes.forEach(m => {
+        const btn = document.getElementById('view-btn-' + m);
+        if (!btn) return;
+        if (m === mode) {
+          btn.className = 'px-3.5 py-2 rounded-lg text-xs font-semibold transition bg-champagne-500 text-obsidian-950';
+        } else {
+          btn.className = 'px-3.5 py-2 rounded-lg text-xs font-semibold transition text-slate-300 hover:text-white';
+        }
+      });
+      renderGalleryGrid();
+    }
+
+    function selectCollectionAndScroll(categoryId) {
+      setCategoryFilter(categoryId);
+      navigateSection('trien-lam');
+      showToast(`Đã mở bộ sưu tập: ${categoryId}`, 'success');
+    }
+
+    // -------------------------------------------------------------------------
+    // 6. FULL-SCREEN LIGHTBOX WITH ZOOM, PAN, PREV/NEXT & PERMISSION DOWNLOAD
+    // -------------------------------------------------------------------------
+    function openLightboxById(artId) {
+      if (filteredArtworksCache.length === 0) {
+        filteredArtworksCache = artworksState.slice();
+      }
+      let idx = filteredArtworksCache.findIndex(a => a.id === artId);
+      if (idx === -1) {
+        filteredArtworksCache = artworksState.slice();
+        idx = filteredArtworksCache.findIndex(a => a.id === artId);
+      }
+      currentLightboxIndex = Math.max(0, idx);
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) modal.classList.remove('hidden');
+      resetLightboxZoom();
+      updateLightboxView();
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function navigateLightbox(direction) {
+      if (filteredArtworksCache.length === 0) return;
+      currentLightboxIndex = (currentLightboxIndex + direction + filteredArtworksCache.length) % filteredArtworksCache.length;
+      resetLightboxZoom();
+      updateLightboxView();
+    }
+
+    function updateLightboxView() {
+      const art = filteredArtworksCache[currentLightboxIndex];
+      if (!art) return;
+
+      const img = document.getElementById('lb-main-image');
+      if (img) {
+        img.src = art.imageUrl;
+        img.alt = art.title;
+      }
+      setText('lb-category-badge', art.category);
+      setText('lb-title-header', art.title);
+      setText('lb-counter-badge', `(${currentLightboxIndex + 1} / ${filteredArtworksCache.length})`);
+      setText('lb-aspect-badge', `Tỷ lệ ${art.aspectRatio}`);
+      setText('lb-date-badge', `Ngày: ${art.createdAt}`);
+      setText('lb-sidebar-title', art.title);
+      setText('lb-sidebar-description', art.description);
+      setText('lb-sidebar-prompt', art.prompt || 'Tác phẩm nghệ thuật sáng tạo bởi An Nhiên AI.');
+
+      const tagsBox = document.getElementById('lb-sidebar-tags');
+      if (tagsBox) {
+        tagsBox.innerHTML = (art.tags || []).map(t =>
+          `<button type="button" onclick="closeLightbox(); filterByTag('${escapeHtml(t)}')" class="px-2.5 py-1 rounded-lg bg-obsidian-950 border border-slate-800 text-xs text-champagne-300 hover:border-champagne-400">#${escapeHtml(t)}</button>`
+        ).join('');
+      }
+
+      // Download Permission Enforcement
+      const dlBtn = document.getElementById('btn-lb-download-original');
+      const dlNote = document.getElementById('lb-download-permission-note');
+      if (dlBtn && dlNote) {
+        if (art.allowDownload) {
+          dlBtn.className = 'w-full py-3 px-4 rounded-xl gold-btn text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg';
+          dlBtn.innerHTML = '<span>⬇ Tải Ảnh Gốc Chất Lượng Cao</span>';
+          dlNote.textContent = '✓ Chủ sở hữu An Nhiên AI cho phép tải ảnh gốc của tác phẩm này.';
+        } else {
+          dlBtn.className = 'w-full py-3 px-4 rounded-xl bg-obsidian-800 border border-champagne-500/40 text-champagne-300 text-xs sm:text-sm flex items-center justify-center gap-2 hover:bg-champagne-500/20 transition';
+          dlBtn.innerHTML = '<span>🔒 Liên Hệ Xin Cấp Phép Tải Ảnh Gốc</span>';
+          dlNote.textContent = 'Tác phẩm giới hạn bản quyền triển lãm. Nhấn để gửi yêu cầu cấp phép tới tác giả.';
+        }
+      }
+    }
+
+    function adjustLightboxZoom(delta) {
+      lightboxZoom = Math.min(4, Math.max(0.6, Number((lightboxZoom + delta).toFixed(2))));
+      if (lightboxZoom === 1) {
+        lightboxPanX = 0;
+        lightboxPanY = 0;
+      }
+      applyLightboxTransform();
+    }
+
+    function resetLightboxZoom() {
+      lightboxZoom = 1;
+      lightboxPanX = 0;
+      lightboxPanY = 0;
+      applyLightboxTransform();
+    }
+
+    function applyLightboxTransform() {
+      const img = document.getElementById('lb-main-image');
+      const zoomLabel = document.getElementById('lb-zoom-level');
+      if (img) {
+        img.style.transform = `translate(${lightboxPanX}px, ${lightboxPanY}px) scale(${lightboxZoom})`;
+        img.style.cursor = lightboxZoom > 1 ? 'grab' : 'default';
+      }
+      if (zoomLabel) {
+        zoomLabel.textContent = `${Math.round(lightboxZoom * 100)}%`;
+      }
+    }
+
+    function handleLightboxWheel(event) {
+      event.preventDefault();
+      const delta = event.deltaY < 0 ? 0.25 : -0.25;
+      adjustLightboxZoom(delta);
+    }
+
+    function startLightboxPan(event) {
+      if (lightboxZoom <= 1) return;
+      isPanningLightbox = true;
+      panStartX = event.clientX - lightboxPanX;
+      panStartY = event.clientY - lightboxPanY;
+    }
+
+    function moveLightboxPan(event) {
+      if (!isPanningLightbox) return;
+      lightboxPanX = event.clientX - panStartX;
+      lightboxPanY = event.clientY - panStartY;
+      applyLightboxTransform();
+    }
+
+    function endLightboxPan() {
+      isPanningLightbox = false;
+    }
+
+    function toggleLightboxSidebar() {
+      const sb = document.getElementById('lb-info-sidebar');
+      if (sb) sb.classList.toggle('hidden');
+    }
+
+    function toggleBrowserFullscreen() {
+      const modal = document.getElementById('lightbox-modal');
+      if (!document.fullscreenElement && modal && modal.requestFullscreen) {
+        modal.requestFullscreen().catch(() => {});
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    function copyLightboxPrompt() {
+      const art = filteredArtworksCache[currentLightboxIndex];
+      if (!art) return;
+      copyTextToClipboard(art.prompt || art.description);
+      showToast('Đã sao chép thông số & mô tả sáng tạo!', 'success');
+    }
+
+    function handleDownloadOriginalArtwork() {
+      const art = filteredArtworksCache[currentLightboxIndex];
+      if (!art) return;
+
+      if (!art.allowDownload) {
+        closeLightbox();
+        openCommissionModal(`Xin cấp phép tải ảnh gốc: ${art.title}`);
+        return;
+      }
+
+      const link = document.createElement('a');
+      link.href = art.imageUrl;
+      const slug = art.title.toLowerCase().replace(/[^a-z0-9]+/gi, '-');
+      link.download = `an-nhien-ai-${slug || art.id}.jpg`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast(`Đang tải ảnh gốc: "${art.title}"`, 'success');
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. ADMIN STUDIO: AUTHENTICATION, CRUD, MULTI-UPLOAD & REORDERING
+    // -------------------------------------------------------------------------
+    function handleQuickUploadClick() {
+      openAdminModal('upload');
+    }
+
+    function openAdminModal(targetTab) {
+      const modal = document.getElementById('admin-modal');
+      const loginView = document.getElementById('admin-login-view');
+      const dashView = document.getElementById('admin-dashboard-view');
+      const logoutBtn = document.getElementById('btn-admin-logout');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+
+      if (isAdminAuthenticated) {
+        if (loginView) loginView.classList.add('hidden');
+        if (dashView) dashView.classList.remove('hidden');
+        if (logoutBtn) logoutBtn.classList.remove('hidden');
+        switchAdminTab(targetTab || 'artworks');
+      } else {
+        if (loginView) loginView.classList.remove('hidden');
+        if (dashView) dashView.classList.add('hidden');
+        if (logoutBtn) logoutBtn.classList.add('hidden');
+      }
+    }
+
+    function closeAdminModal() {
+      const modal = document.getElementById('admin-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function handleAdminLoginSubmit(event) {
+      event.preventDefault();
+      const email = (document.getElementById('admin-email-input')?.value || '').trim();
+      const pass = (document.getElementById('admin-password-input')?.value || '').trim();
+
+      if (email.toLowerCase() === 'admin@annhien.ai' && pass === 'AnNhien2026!') {
+        isAdminAuthenticated = true;
+        setText('admin-btn-label', 'Quản Trị (Đã mở)');
+        showToast('Đăng nhập Quản trị viên thành công!', 'success');
+        openAdminModal('artworks');
+      } else {
+        showToast('Sai thông tin đăng nhập! Mật khẩu mặc định là AnNhien2026!', 'error');
+      }
+    }
+
+    function handleAdminLogout() {
+      isAdminAuthenticated = false;
+      setText('admin-btn-label', 'Quản Trị Viên');
+      closeAdminModal();
+      showToast('Đã đăng xuất khỏi khu vực Quản trị.', 'info');
+    }
+
+    function switchAdminTab(tabName) {
+      const tabs = ['artworks', 'upload', 'cloud', 'orders'];
+      tabs.forEach(t => {
+        const tabBtn = document.getElementById('admin-tab-' + t);
+        const panel = document.getElementById('admin-panel-' + t);
+        if (tabBtn) {
+          if (t === tabName) {
+            tabBtn.className = 'px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold border-b-2 border-champagne-400 text-champagne-300 bg-obsidian-900';
+          } else {
+            tabBtn.className = 'px-4 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white';
+          }
+        }
+        if (panel) {
+          if (t === tabName) panel.classList.remove('hidden');
+          else panel.classList.add('hidden');
+        }
+      });
+    }
+
+    function renderAdminArtworksTable() {
+      const tbody = document.getElementById('admin-artworks-tbody');
+      if (!tbody) return;
+
+      tbody.innerHTML = artworksState.map((art, index) => `
+        <tr class="hover:bg-obsidian-950/60 transition">
+          <td class="py-3 px-3 font-mono text-xs text-slate-400">
+            <div class="flex items-center gap-1">
+              <span>#${index + 1}</span>
+              <button type="button" onclick="moveArtworkOrder(${index}, -1)" class="px-1.5 py-0.5 rounded bg-obsidian-800 hover:bg-champagne-500 hover:text-obsidian-950" title="Đưa lên">↑</button>
+              <button type="button" onclick="moveArtworkOrder(${index}, 1)" class="px-1.5 py-0.5 rounded bg-obsidian-800 hover:bg-champagne-500 hover:text-obsidian-950" title="Đưa xuống">↓</button>
+            </div>
+          </td>
+          <td class="py-3 px-3">
+            <img src="${art.thumbUrl || art.imageUrl}" alt="${escapeHtml(art.title)}" class="w-16 h-12 object-cover rounded-lg border border-slate-700">
+          </td>
+          <td class="py-3 px-3">
+            <div class="font-semibold text-white">${escapeHtml(art.title)}</div>
+            <div class="text-[11px] text-slate-400 line-clamp-1">${(art.tags || []).map(t => '#' + t).join(' ')}</div>
+          </td>
+          <td class="py-3 px-3">
+            <span class="px-2 py-0.5 rounded bg-champagne-500/15 text-champagne-300 text-xs">${escapeHtml(art.category)}</span>
+            <span class="block text-[11px] text-slate-400 mt-0.5">Tỷ lệ: ${art.aspectRatio} • ${art.createdAt}</span>
+          </td>
+          <td class="py-3 px-3">
+            <button type="button" onclick="toggleArtworkFeatured('${art.id}')" class="px-2.5 py-1 rounded-lg text-xs font-medium ${art.featured ? 'bg-champagne-500 text-obsidian-950' : 'bg-obsidian-800 text-slate-400'}">
+              ${art.featured ? '★ Tiêu biểu' : '☆ Thường'}
+            </button>
+          </td>
+          <td class="py-3 px-3">
+            <button type="button" onclick="toggleArtworkDownloadPermission('${art.id}')" class="px-2.5 py-1 rounded-lg text-xs font-medium ${art.allowDownload ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}">
+              ${art.allowDownload ? '🔓 Cho phép' : '🔒 Khóa'}
+            </button>
+          </td>
+          <td class="py-3 px-3 text-right space-x-1.5">
+            <button type="button" onclick="openEditArtworkModal('${art.id}')" class="px-2.5 py-1.5 rounded-lg bg-obsidian-800 hover:bg-champagne-500 text-slate-200 hover:text-obsidian-950 text-xs font-medium transition">Sửa</button>
+            <button type="button" onclick="confirmDeleteArtwork('${art.id}')" class="px-2.5 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-600 text-rose-300 hover:text-white text-xs font-medium transition">Xóa</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function moveArtworkOrder(index, delta) {
+      const target = index + delta;
+      if (target < 0 || target >= artworksState.length) return;
+      const temp = artworksState[index];
+      artworksState[index] = artworksState[target];
+      artworksState[target] = temp;
+      await saveToPersistentDB('artworks', artworksState);
+      renderAllGalleryComponents();
+      showToast('Đã cập nhật thứ tự trưng bày tác phẩm.', 'info');
+    }
+
+    async function toggleArtworkFeatured(artId) {
+      const art = artworksState.find(a => a.id === artId);
+      if (!art) return;
+      art.featured = !art.featured;
+      await saveToPersistentDB('artworks', artworksState);
+      renderAllGalleryComponents();
+      showToast(`Đã cập nhật trạng thái tiêu biểu cho "${art.title}"`, 'success');
+    }
+
+    async function toggleArtworkDownloadPermission(artId) {
+      const art = artworksState.find(a => a.id === artId);
+      if (!art) return;
+      art.allowDownload = !art.allowDownload;
+      await saveToPersistentDB('artworks', artworksState);
+      renderAllGalleryComponents();
+      showToast(art.allowDownload ? 'Đã mở quyền tải ảnh gốc.' : 'Đã khóa tải ảnh gốc (Bảo vệ bản quyền).', 'info');
+    }
+
+    function openEditArtworkModal(artId) {
+      const art = artworksState.find(a => a.id === artId);
+      if (!art) return;
+      document.getElementById('edit-art-id').value = art.id;
+      document.getElementById('edit-art-title').value = art.title;
+      document.getElementById('edit-art-category').value = art.category;
+      document.getElementById('edit-art-ratio').value = art.aspectRatio;
+      document.getElementById('edit-art-date').value = art.createdAt;
+      document.getElementById('edit-art-desc').value = art.description;
+      document.getElementById('edit-art-prompt').value = art.prompt || '';
+      document.getElementById('edit-art-tags').value = (art.tags || []).join(', ');
+      document.getElementById('edit-art-featured').checked = Boolean(art.featured);
+      document.getElementById('edit-art-allow-dl').checked = Boolean(art.allowDownload);
+
+      const modal = document.getElementById('edit-artwork-modal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeEditArtworkModal() {
+      const modal = document.getElementById('edit-artwork-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    async function saveEditedArtwork(event) {
+      event.preventDefault();
+      const id = document.getElementById('edit-art-id').value;
+      const art = artworksState.find(a => a.id === id);
+      if (!art) return;
+
+      art.title = document.getElementById('edit-art-title').value.trim();
+      art.category = document.getElementById('edit-art-category').value;
+      art.aspectRatio = document.getElementById('edit-art-ratio').value;
+      art.createdAt = document.getElementById('edit-art-date').value;
+      art.description = document.getElementById('edit-art-desc').value.trim();
+      art.prompt = document.getElementById('edit-art-prompt').value.trim();
+      art.tags = document.getElementById('edit-art-tags').value
+        .split(',')
+        .map(s => s.trim().replace(/^#/, ''))
+        .filter(Boolean);
+      art.featured = document.getElementById('edit-art-featured').checked;
+      art.allowDownload = document.getElementById('edit-art-allow-dl').checked;
+
+      await saveToPersistentDB('artworks', artworksState);
+      closeEditArtworkModal();
+      renderAllGalleryComponents();
+      showToast(`Đã lưu thay đổi cho tác phẩm "${art.title}"!`, 'success');
+    }
+
+    function confirmDeleteArtwork(artId) {
+      const art = artworksState.find(a => a.id === artId);
+      if (!art) return;
+      openConfirmDialog(
+        'Xóa tác phẩm khỏi Thư viện?',
+        `Bạn có chắc chắn muốn xóa tác phẩm "${art.title}"? Thao tác này sẽ cập nhật ngay vào kho lưu trữ.`,
+        async () => {
+          artworksState = artworksState.filter(a => a.id !== artId);
+          await saveToPersistentDB('artworks', artworksState);
+          renderAllGalleryComponents();
+          showToast('Đã xóa tác phẩm khỏi thư viện.', 'info');
+        }
+      );
+    }
+
+    function openResetConfirmModal() {
+      openConfirmDialog(
+        'Khôi phục Bộ Sưu Tập Mẫu?',
+        'Hệ thống sẽ khôi phục lại 9 tác phẩm triển lãm tiêu biểu ban đầu của An Nhiên AI.',
+        async () => {
+          artworksState = JSON.parse(JSON.stringify(INITIAL_ARTWORKS));
+          await saveToPersistentDB('artworks', artworksState);
+          renderAllGalleryComponents();
+          showToast('Đã khôi phục bộ dữ liệu triển lãm mẫu!', 'success');
+        }
+      );
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. MULTI-FILE UPLOAD ENGINE + AUTOMATIC THUMBNAIL GENERATION + CLOUDINARY
+    // -------------------------------------------------------------------------
+    function detectAspectRatioBucket(width, height) {
+      if (!width || !height) return '16:9';
+      const r = width / height;
+      if (r >= 1.35) return '16:9';
+      if (r <= 0.65) return '9:16';
+      if (r >= 0.9 && r <= 1.15) return '1:1';
+      return '3:4';
+    }
+
+    function generateThumbnailFromDataUrl(dataUrl, maxDim = 540) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = function() {
+          const w = img.naturalWidth || 800;
+          const h = img.naturalHeight || 600;
+          const ratioBucket = detectAspectRatioBucket(w, h);
+          let targetW = w;
+          let targetH = h;
+          if (w > h && w > maxDim) {
+            targetW = maxDim;
+            targetH = Math.round((h * maxDim) / w);
+          } else if (h >= w && h > maxDim) {
+            targetH = maxDim;
+            targetW = Math.round((w * maxDim) / h);
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = targetW;
+          canvas.height = targetH;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, targetW, targetH);
+          const thumbDataUrl = canvas.toDataURL('image/jpeg', 0.82);
+          resolve({ thumbDataUrl, width: w, height: h, ratioBucket });
+        };
+        img.onerror = function() {
+          resolve({ thumbDataUrl: dataUrl, width: 800, height: 600, ratioBucket: '16:9' });
+        };
+        img.src = dataUrl;
+      });
+    }
+
+    async function handleMultiFileSelect(event) {
+      const files = Array.from(event.target.files || []);
+      if (files.length === 0) return;
+
+      const defaultCat = document.getElementById('batch-default-category')?.value || 'Chân dung nghệ thuật';
+      const defaultDate = document.getElementById('batch-default-date')?.value || '2026-10-25';
+
+      setText('upload-progress-status', `Đang xử lý & tạo ảnh thu nhỏ cho ${files.length} tệp...`);
+
+      for (const file of files) {
+        const rawDataUrl = await new Promise((res) => {
+          const reader = new FileReader();
+          reader.onload = (e) => res(e.target.result);
+          reader.readAsDataURL(file);
+        });
+
+        const { thumbDataUrl, ratioBucket } = await generateThumbnailFromDataUrl(rawDataUrl, 560);
+        const cleanTitle = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]+/g, ' ');
+
+        uploadQueue.push({
+          tempId: 'q-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6),
+          fileObj: file,
+          title: cleanTitle.charAt(0).toUpperCase() + cleanTitle.slice(1),
+          category: defaultCat,
+          aspectRatio: ratioBucket,
+          createdAt: defaultDate,
+          description: `Tác phẩm nghệ thuật sáng tạo bởi An Nhiên AI thuộc chủ đề ${defaultCat}.`,
+          prompt: 'Masterpiece AI artwork curated by An Nhiên AI',
+          tags: 'annhienai, nghethuat, aiart',
+          featured: true,
+          allowDownload: true,
+          imageUrl: rawDataUrl,
+          thumbUrl: thumbDataUrl
+        });
+      }
+
+      event.target.value = '';
+      renderUploadQueue();
+      setText('upload-progress-status', `Đã sẵn sàng ${uploadQueue.length} ảnh trong hàng đợi.`);
+      showToast(`Đã nạp ${files.length} ảnh vào hàng đợi chỉnh sửa!`, 'success');
+    }
+
+    function addExternalUrlToUploadQueue() {
+      const input = document.getElementById('external-img-url-input');
+      const url = (input?.value || '').trim();
+      if (!url) {
+        showToast('Vui lòng nhập đường dẫn URL hình ảnh hợp lệ.', 'error');
+        return;
+      }
+      const defaultCat = document.getElementById('batch-default-category')?.value || 'Chân dung nghệ thuật';
+      const defaultDate = document.getElementById('batch-default-date')?.value || '2026-10-25';
+
+      uploadQueue.push({
+        tempId: 'q-' + Date.now(),
+        fileObj: null,
+        title: 'Tác Phẩm Đám Mây Mới',
+        category: defaultCat,
+        aspectRatio: '16:9',
+        createdAt: defaultDate,
+        description: 'Tác phẩm kết nối từ dịch vụ lưu trữ đám mây An Nhiên AI.',
+        prompt: 'Cloud hosted AI artwork by An Nhiên AI',
+        tags: 'annhienai, cloud, aiart',
+        featured: true,
+        allowDownload: true,
+        imageUrl: url,
+        thumbUrl: url
+      });
+      if (input) input.value = '';
+      renderUploadQueue();
+    }
+
+    function renderUploadQueue() {
+      const listEl = document.getElementById('upload-queue-list');
+      const countEl = document.getElementById('upload-queue-count');
+      if (countEl) countEl.textContent = String(uploadQueue.length);
+      if (!listEl) return;
+
+      if (uploadQueue.length === 0) {
+        listEl.innerHTML = `<div class="text-center py-14 text-slate-500 text-xs">Chưa có ảnh nào trong hàng đợi. Hãy chọn 1 hoặc nhiều ảnh ở khung bên trái để chỉnh sửa thông tin và lưu vào thư viện.</div>`;
+        return;
+      }
+
+      listEl.innerHTML = uploadQueue.map((item, idx) => `
+        <div class="p-3.5 rounded-xl bg-obsidian-900 border border-slate-800 flex flex-col sm:flex-row gap-3.5 items-start">
+          <img src="${item.thumbUrl}" alt="Preview" class="w-24 h-24 object-cover rounded-lg border border-champagne-500/30 shrink-0">
+          <div class="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full text-xs">
+            <input type="text" value="${escapeHtml(item.title)}" oninput="updateQueueItem(${idx}, 'title', this.value)" placeholder="Tên tác phẩm..." class="px-2.5 py-1.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white font-semibold">
+            <div class="grid grid-cols-2 gap-2">
+              <select onchange="updateQueueItem(${idx}, 'category', this.value)" class="px-2 py-1.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white">
+                ${GALLERY_CATEGORIES.filter(c => c.id !== 'all').map(c => `<option value="${c.id}" ${c.id === item.category ? 'selected' : ''}>${c.name}</option>`).join('')}
+              </select>
+              <select onchange="updateQueueItem(${idx}, 'aspectRatio', this.value)" class="px-2 py-1.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white">
+                <option value="16:9" ${item.aspectRatio === '16:9' ? 'selected' : ''}>16:9 Ngang</option>
+                <option value="9:16" ${item.aspectRatio === '9:16' ? 'selected' : ''}>9:16 Dọc</option>
+                <option value="1:1" ${item.aspectRatio === '1:1' ? 'selected' : ''}>1:1 Vuông</option>
+                <option value="3:4" ${item.aspectRatio === '3:4' ? 'selected' : ''}>3:4 Chân dung</option>
+              </select>
+            </div>
+            <input type="text" value="${escapeHtml(item.description)}" oninput="updateQueueItem(${idx}, 'description', this.value)" placeholder="Mô tả tác phẩm..." class="sm:col-span-2 px-2.5 py-1.5 rounded-lg bg-obsidian-950 border border-slate-700 text-slate-200">
+            <input type="text" value="${escapeHtml(item.tags)}" oninput="updateQueueItem(${idx}, 'tags', this.value)" placeholder="Từ khóa: sen, aodai..." class="px-2.5 py-1.5 rounded-lg bg-obsidian-950 border border-slate-700 text-champagne-300">
+            <div class="flex items-center justify-between">
+              <input type="date" value="${item.createdAt}" onchange="updateQueueItem(${idx}, 'createdAt', this.value)" class="px-2 py-1 rounded bg-obsidian-950 border border-slate-700 text-slate-300">
+              <button type="button" onclick="removeQueueItem(${idx})" class="text-rose-400 hover:underline">Xóa</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateQueueItem(index, field, val) {
+      if (uploadQueue[index]) {
+        uploadQueue[index][field] = val;
+      }
+    }
+
+    function removeQueueItem(index) {
+      uploadQueue.splice(index, 1);
+      renderUploadQueue();
+    }
+
+    function clearUploadQueue() {
+      uploadQueue = [];
+      renderUploadQueue();
+    }
+
+    function applyBatchCategoryToQueue(cat) {
+      uploadQueue.forEach(item => { item.category = cat; });
+      renderUploadQueue();
+    }
+
+    function applyBatchDateToQueue(dateStr) {
+      uploadQueue.forEach(item => { item.createdAt = dateStr; });
+      renderUploadQueue();
+    }
+
+    async function uploadFileToCloudinaryIfConfigured(fileObj) {
+      if (!fileObj || !cloudConfig.cloudinaryName || !cloudConfig.cloudinaryPreset) {
+        return null;
+      }
+      try {
+        const endpoint = `https://api.cloudinary.com/v1_1/${encodeURIComponent(cloudConfig.cloudinaryName)}/image/upload`;
+        const formData = new FormData();
+        formData.append('file', fileObj);
+        formData.append('upload_preset', cloudConfig.cloudinaryPreset);
+        const response = await fetch(endpoint, { method: 'POST', body: formData });
+        if (!response.ok) return null;
+        const data = await response.json();
+        if (data && data.secure_url) {
+          const thumbUrl = data.secure_url.replace('/upload/', '/upload/c_limit,w_640,q_auto,f_auto/');
+          return { fullUrl: data.secure_url, thumbUrl };
+        }
+      } catch (e) {
+        return null;
+      }
+      return null;
+    }
+
+    async function commitUploadQueueToGallery() {
+      if (uploadQueue.length === 0) {
+        showToast('Hãy chọn ít nhất 1 ảnh vào hàng đợi trước khi lưu.', 'error');
+        return;
+      }
+
+      setText('upload-progress-status', 'Đang lưu tác phẩm vào kho lưu trữ bền vững...');
+      const addedCount = uploadQueue.length;
+
+      for (const item of uploadQueue) {
+        let finalFullUrl = item.imageUrl;
+        let finalThumbUrl = item.thumbUrl;
+
+        // If Cloudinary CDN is configured, upload directly to Cloudinary
+        if (item.fileObj && cloudConfig.cloudinaryName && cloudConfig.cloudinaryPreset) {
+          const cloudRes = await uploadFileToCloudinaryIfConfigured(item.fileObj);
+          if (cloudRes) {
+            finalFullUrl = cloudRes.fullUrl;
+            finalThumbUrl = cloudRes.thumbUrl;
+          }
+        }
+
+        const newArt = {
+          id: 'art-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6),
+          title: item.title || 'Tác Phẩm Mới',
+          category: item.category,
+          aspectRatio: item.aspectRatio,
+          createdAt: item.createdAt,
+          featured: Boolean(item.featured),
+          allowDownload: Boolean(item.allowDownload),
+          imageUrl: finalFullUrl,
+          thumbUrl: finalThumbUrl,
+          description: item.description,
+          prompt: item.prompt,
+          tags: String(item.tags || '')
+            .split(',')
+            .map(s => s.trim().replace(/^#/, ''))
+            .filter(Boolean)
+        };
+        artworksState.unshift(newArt);
+      }
+
+      uploadQueue = [];
+      await saveToPersistentDB('artworks', artworksState);
+      renderUploadQueue();
+      renderAllGalleryComponents();
+      switchAdminTab('artworks');
+      showToast(`Đã thêm thành công ${addedCount} tác phẩm mới vào triển lãm!`, 'success');
+    }
+
+    // -------------------------------------------------------------------------
+    // 9. CLOUD STORAGE SYNC (CLOUDINARY + GITHUB REPO API + FIREBASE + JSON)
+    // -------------------------------------------------------------------------
+    function populateCloudConfigInputs() {
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el && val !== undefined) el.value = val;
+      };
+      setVal('cloud-cloudinary-name', cloudConfig.cloudinaryName);
+      setVal('cloud-cloudinary-preset', cloudConfig.cloudinaryPreset);
+      setVal('cloud-github-repo', cloudConfig.githubRepo);
+      setVal('cloud-github-branch', cloudConfig.githubBranchPath);
+      setVal('cloud-github-token', cloudConfig.githubToken);
+      setVal('cloud-firebase-url', cloudConfig.firebaseUrl);
+    }
+
+    async function saveCloudConfiguration() {
+      cloudConfig.cloudinaryName = (document.getElementById('cloud-cloudinary-name')?.value || '').trim();
+      cloudConfig.cloudinaryPreset = (document.getElementById('cloud-cloudinary-preset')?.value || '').trim();
+      cloudConfig.githubRepo = (document.getElementById('cloud-github-repo')?.value || '').trim();
+      cloudConfig.githubBranchPath = (document.getElementById('cloud-github-branch')?.value || 'main:data/gallery-catalog.json').trim();
+      cloudConfig.githubToken = (document.getElementById('cloud-github-token')?.value || '').trim();
+      cloudConfig.firebaseUrl = (document.getElementById('cloud-firebase-url')?.value || '').trim();
+
+      await saveToPersistentDB('cloudConfig', cloudConfig);
+      updateCloudStatusIndicator();
+      showToast('Đã lưu cấu hình kết nối Lưu trữ Đám mây!', 'success');
+    }
+
+    async function syncCatalogToCloudNow() {
+      await saveCloudConfiguration();
+      const payload = {
+        galleryName: 'THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN',
+        brand: 'An Nhiên AI',
+        updatedAt: new Date().toISOString(),
+        totalArtworks: artworksState.length,
+        artworks: artworksState
+      };
+
+      let syncedAny = false;
+
+      // 1. Firebase / Custom REST PUT Sync
+      if (cloudConfig.firebaseUrl && cloudConfig.firebaseUrl.startsWith('https://')) {
+        try {
+          const resp = await fetch(cloudConfig.firebaseUrl, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (resp.ok) {
+            syncedAny = true;
+            showToast('Đã đồng bộ dữ liệu lên Cloud Database thành công!', 'success');
+          }
+        } catch (e) {
+          showToast('Không thể kết nối URL Firebase/REST. Đã lưu bản sao bền vững tại IndexedDB.', 'error');
+        }
+      }
+
+      // 2. GitHub Repository API Commit Sync
+      if (cloudConfig.githubRepo && cloudConfig.githubToken) {
+        try {
+          const [branch, filePath] = (cloudConfig.githubBranchPath || 'main:data/gallery-catalog.json').split(':');
+          const apiUrl = `https://api.github.com/repos/${cloudConfig.githubRepo}/contents/${filePath || 'data/gallery-catalog.json'}`;
+          const headers = {
+            'Authorization': `Bearer ${cloudConfig.githubToken}`,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          };
+          let existingSha = undefined;
+          const getUrl = apiUrl + '?ref=' + (branch || 'main');
+          const getResp = await fetch(getUrl, { headers });
+          if (getResp.ok) {
+            const meta = await getResp.json();
+            existingSha = meta.sha;
+          }
+          const jsonStr = JSON.stringify(payload, null, 2);
+          const base64Content = btoa(unescape(encodeURIComponent(jsonStr)));
+          const putBody = {
+            message: `Cập nhật thư viện ảnh An Nhiên AI (${artworksState.length} tác phẩm)`,
+            content: base64Content,
+            branch: branch || 'main'
+          };
+          if (existingSha) putBody.sha = existingSha;
+
+          const putResp = await fetch(apiUrl, {
+            method: 'PUT',
+            headers,
+            body: JSON.stringify(putBody)
+          });
+          if (putResp.ok) {
+            syncedAny = true;
+            showToast('Đã commit trực tiếp gallery-catalog.json lên GitHub Pages!', 'success');
+          }
+        } catch (e) {
+          showToast('Lỗi xác thực GitHub Token hoặc tên Repo.', 'error');
+        }
+      }
+
+      if (!syncedAny) {
+        await saveToPersistentDB('artworks', artworksState);
+        showToast('Đã lưu bền vững vào IndexedDB. Hãy điền thông tin Cloudinary/GitHub/Firebase nếu muốn đẩy lên máy chủ từ xa.', 'info');
+      }
+    }
+
+    function exportGalleryCatalogJSON() {
+      const payload = {
+        galleryName: 'THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN',
+        brand: 'An Nhiên AI',
+        exportedAt: new Date().toISOString(),
+        artworks: artworksState
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'gallery-catalog.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('Đã xuất file gallery-catalog.json để đưa lên GitHub Pages!', 'success');
+    }
+
+    function importGalleryCatalogJSON(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = async function(e) {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          const list = Array.isArray(parsed) ? parsed : parsed.artworks;
+          if (Array.isArray(list) && list.length > 0) {
+            artworksState = list;
+            await saveToPersistentDB('artworks', artworksState);
+            renderAllGalleryComponents();
+            showToast(`Đã nhập thành công ${list.length} tác phẩm từ file JSON!`, 'success');
+          } else {
+            showToast('Cấu trúc file JSON không hợp lệ.', 'error');
+          }
+        } catch (err) {
+          showToast('Không thể đọc file JSON.', 'error');
+        }
+      };
+      reader.readAsText(file);
+      event.target.value = '';
+    }
+
+    // -------------------------------------------------------------------------
+    // 10. COMMISSIONS, COURSES, CONTACT & SOCIAL SHARING
+    // -------------------------------------------------------------------------
+    function openCommissionModal(serviceTitle) {
+      const modal = document.getElementById('service-booking-modal');
+      const titleEl = document.getElementById('booking-modal-title');
+      const inputEl = document.getElementById('booking-service-name');
+      if (titleEl) titleEl.textContent = 'Đặt Dịch Vụ Sáng Tạo Hình Ảnh AI';
+      if (inputEl) inputEl.value = serviceTitle;
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function openCourseModal(courseTitle) {
+      const modal = document.getElementById('service-booking-modal');
+      const titleEl = document.getElementById('booking-modal-title');
+      const inputEl = document.getElementById('booking-service-name');
+      if (titleEl) titleEl.textContent = 'Đăng Ký Tư Vấn Khóa Học AI';
+      if (inputEl) inputEl.value = 'Khóa học: ' + courseTitle;
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('service-booking-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    async function submitBookingForm(event) {
+      event.preventDefault();
+      const service = document.getElementById('booking-service-name').value;
+      const clientName = document.getElementById('booking-client-name').value.trim();
+      const contact = document.getElementById('booking-client-contact').value.trim();
+      const notes = document.getElementById('booking-client-notes').value.trim();
+
+      ordersState.unshift({
+        id: 'ord-' + Date.now(),
+        type: service.startsWith('Khóa học:') ? 'Đăng ký Khóa học AI' : 'Đặt dịch vụ thiết kế',
+        service,
+        clientName,
+        contact,
+        notes,
+        createdAt: new Date().toLocaleString('vi-VN'),
+        status: 'Mới nhận'
+      });
+
+      await saveToPersistentDB('orders', ordersState);
+      renderAdminOrdersList();
+      event.target.reset();
+      closeBookingModal();
+      showToast('Cảm ơn bạn! Yêu cầu đã được lưu vào hệ thống của An Nhiên AI.', 'success');
+    }
+
+    async function handleContactFormSubmit(event) {
+      event.preventDefault();
+      const clientName = document.getElementById('contact-name').value.trim();
+      const contact = document.getElementById('contact-phone').value.trim();
+      const topic = document.getElementById('contact-topic').value;
+      const ratioPref = document.getElementById('contact-ratio-pref').value;
+      const msg = document.getElementById('contact-message').value.trim();
+
+      ordersState.unshift({
+        id: 'ord-' + Date.now(),
+        type: 'Liên hệ & Đặt hàng từ Website',
+        service: `${topic} (${ratioPref})`,
+        clientName,
+        contact,
+        notes: msg,
+        createdAt: new Date().toLocaleString('vi-VN'),
+        status: 'Mới nhận'
+      });
+
+      await saveToPersistentDB('orders', ordersState);
+      renderAdminOrdersList();
+      event.target.reset();
+      showToast('Đã gửi tin nhắn thành công tới An Nhiên AI!', 'success');
+    }
+
+    function renderAdminOrdersList() {
+      const countEl = document.getElementById('admin-orders-count');
+      if (countEl) countEl.textContent = String(ordersState.length);
+      const listEl = document.getElementById('admin-orders-list');
+      if (!listEl) return;
+
+      if (ordersState.length === 0) {
+        listEl.innerHTML = `<div class="text-center py-10 text-slate-500 text-xs">Chưa có đơn đặt hàng hoặc đăng ký mới.</div>`;
+        return;
+      }
+
+      listEl.innerHTML = ordersState.map((ord, idx) => `
+        <div class="p-4 rounded-xl bg-obsidian-950 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="space-y-1 text-xs">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-champagne-500/20 text-champagne-300 font-semibold">${escapeHtml(ord.type)}</span>
+              <span class="text-white font-bold">${escapeHtml(ord.service)}</span>
+              <span class="text-slate-500">• ${escapeHtml(ord.createdAt)}</span>
+            </div>
+            <div class="text-slate-200">👤 Khách hàng: <strong>${escapeHtml(ord.clientName)}</strong> — 📞 Liên hệ: <span class="text-emerald-400">${escapeHtml(ord.contact)}</span></div>
+            <p class="text-slate-400">${escapeHtml(ord.notes)}</p>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button type="button" onclick="toggleOrderStatus(${idx})" class="px-3 py-1.5 rounded-lg text-xs font-semibold ${ord.status === 'Đã xử lý' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}">
+              ${escapeHtml(ord.status)}
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function toggleOrderStatus(idx) {
+      if (!ordersState[idx]) return;
+      ordersState[idx].status = ordersState[idx].status === 'Đã xử lý' ? 'Đang tư vấn' : 'Đã xử lý';
+      await saveToPersistentDB('orders', ordersState);
+      renderAdminOrdersList();
+    }
+
+    function shareGallerySocial(platform) {
+      const shareUrl = window.location.href.split('#')[0];
+      const shareText = 'Thưởng lãm THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN | Không gian triển lãm nghệ thuật số thuộc thương hiệu An Nhiên AI';
+      executeSocialShare(platform, shareUrl, shareText);
+    }
+
+    function shareCurrentArtwork(platform) {
+      const art = filteredArtworksCache[currentLightboxIndex];
+      if (!art) return;
+      const shareUrl = window.location.href.split('#')[0] + '#' + art.id;
+      const shareText = `Tác phẩm "${art.title}" (${art.category}) – Thư viện Hình ảnh AI An Nhiên`;
+      executeSocialShare(platform, shareUrl, shareText);
+    }
+
+    function shareSpecificArtworkById(artId) {
+      const art = artworksState.find(a => a.id === artId);
+      if (!art) return;
+      const shareUrl = window.location.href.split('#')[0] + '#' + art.id;
+      const shareText = `Tác phẩm "${art.title}" (${art.category}) – Thư viện Hình ảnh AI An Nhiên`;
+      executeSocialShare('copy', shareUrl, shareText);
+    }
+
+    function executeSocialShare(platform, url, text) {
+      if (platform === 'facebook') {
+        const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+        window.open(fbUrl, '_blank', 'noopener,noreferrer');
+        showToast('Đang mở cửa sổ chia sẻ Facebook...', 'info');
+      } else if (platform === 'zalo') {
+        copyTextToClipboard(`${text} - ${url}`);
+        window.open(`https://sp.zalo.me/share_inline?d=${encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify({ url })))))}`, '_blank', 'noopener,noreferrer');
+        showToast('Đã sao chép liên kết & mở chia sẻ Zalo!', 'success');
+      } else {
+        copyTextToClipboard(`${text}\n${url}`);
+        showToast('Đã sao chép liên kết tác phẩm vào bộ nhớ tạm!', 'success');
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 11. UTILITIES: THEME, NAVIGATION, SEO JSON-LD, TOASTS & DIALOGS
+    // -------------------------------------------------------------------------
+    function toggleMuseumTheme() {
+      const htmlEl = document.documentElement;
+      const isLight = htmlEl.classList.toggle('light-museum');
+      setText('theme-icon', isLight ? '☀️' : '🌙');
+      setText('theme-label', isLight ? 'Bảo Tàng Sáng' : 'Phòng Tối');
+      showToast(isLight ? 'Đã chuyển sang chế độ Bảo Tàng Ngà Sáng' : 'Đã chuyển sang chế độ Phòng Triển Lãm Đêm', 'info');
+    }
+
+    function navigateSection(sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-menu-drawer');
+      if (drawer) drawer.classList.toggle('hidden');
+    }
+
+    function updateDynamicSEOSchema() {
+      const scriptEl = document.getElementById('seo-json-ld');
+      if (!scriptEl) return;
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'ArtGallery',
+        'name': 'THƯ VIỆN HÌNH ẢNH AI – AN NHIÊN',
+        'description': 'Phòng triển lãm nghệ thuật số và kho lưu trữ tác phẩm trí tuệ nhân tạo thuộc thương hiệu An Nhiên AI.',
+        'brand': { '@type': 'Brand', 'name': 'An Nhiên AI' },
+        'hasOfferCatalog': {
+          '@type': 'OfferCatalog',
+          'name': 'Các Tác Phẩm Nghệ Thuật AI Tiêu Biểu',
+          'itemListElement': artworksState.slice(0, 10).map((art, i) => ({
+            '@type': 'VisualArtwork',
+            'position': i + 1,
+            'name': art.title,
+            'artform': art.category,
+            'dateCreated': art.createdAt,
+            'description': art.description,
+            'creator': { '@type': 'Person', 'name': 'An Nhiên AI' }
+          }))
+        }
+      };
+      scriptEl.textContent = JSON.stringify(schema, null, 2);
+    }
+
+    function openConfirmDialog(title, message, onConfirm) {
+      setText('confirm-dialog-title', title);
+      setText('confirm-dialog-message', message);
+      pendingConfirmCallback = onConfirm;
+      const modal = document.getElementById('confirm-dialog-modal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeConfirmDialog() {
+      pendingConfirmCallback = null;
+      const modal = document.getElementById('confirm-dialog-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function executeConfirmedAction() {
+      const cb = pendingConfirmCallback;
+      closeConfirmDialog();
+      if (typeof cb === 'function') cb();
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      const colorClasses = type === 'success'
+        ? 'border-emerald-400/50 bg-obsidian-900/95 text-emerald-300'
+        : type === 'error'
+        ? 'border-rose-400/50 bg-obsidian-900/95 text-rose-300'
+        : 'border-champagne-400/50 bg-obsidian-900/95 text-champagne-300';
+
+      toast.className = `pointer-events-auto px-4 py-3 rounded-xl border shadow-2xl backdrop-blur-md text-xs font-medium flex items-center gap-2.5 transition-all duration-300 ${colorClasses}`;
+      toast.innerHTML = `<span>✦</span><span>${escapeHtml(message)}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(8px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3400);
+    }
+
+    function copyTextToClipboard(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(() => fallbackCopyText(text));
+      } else {
+        fallbackCopyText(text);
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    function setText(id, text) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function setupKeyboardShortcuts() {
+      window.addEventListener('keydown', (e) => {
+        const lbModal = document.getElementById('lightbox-modal');
+        const isLbOpen = lbModal && !lbModal.classList.contains('hidden');
+        if (!isLbOpen) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        else if (e.key === 'ArrowRight') navigateLightbox(1);
+        else if (e.key === '+' || e.key === '=') adjustLightboxZoom(0.4);
+        else if (e.key === '-') adjustLightboxZoom(-0.4);
+        else if (e.key === '0') resetLightboxZoom();
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', initGalleryApp);
+  </script>
+</body>
+</html>
